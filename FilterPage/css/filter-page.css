@@ -2,17 +2,20 @@
     box-sizing: border-box;
 }
 
+/* Sets the style for the body of the webpage, this should be uniform across all pages */
 .bodyStyle {
     background-color: rgb(255, 255, 255);
     margin: 0;
 }
 
+/* Creates a default flexbox with its items centered and in columns */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Styles the text within the "I know where I want to go", "Help me decide", and "Give me a random location" buttons */
 .containerText {
     font-size: 2rem;
     color: rgb(255, 255, 255);
@@ -20,8 +23,6 @@
 				  1px 1px 0 #999898,
 				 1px -1px 0 #999898,
 				 -1px -1px 0 #999898;
-    /* background-color: rgba(49, 193, 193, 0.60); */
-    /* background-color: rgba(116, 211, 174, 1); */
     background: rgb(108,218,231);
     background: linear-gradient(0deg, rgba(108,218,231,1) 3%, rgba(129,226,188,1) 67%);
     padding: 20px 10px;
@@ -33,26 +34,37 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
+/* Styles the button container */
 .encase {
     background-color: rgba(246, 231, 203, 0);
     border-radius: 10px;
     width: 75%;
 }
 
+/* Solidifies the border when the text is hovered over */
 .containerText:hover {
     border: 2px solid;
     border-color: black;
 }
 
+/* Creates a fade in animation for the buttons */
 .fade-in-p { 
     animation: fadeIn 6s; 
 }
 
+/* Sets the opacity transition for the fade in animation */
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
+.downsizeLogo { 
+    margin-left: 10px;
+    height: 84px;
+    width: 84px;
+}
+
+/* Styles the header container */
 .container.header {
     background-color: rgb(249, 165, 134);
     padding-top: 25px;
@@ -148,16 +160,16 @@
   
 .img-container::-webkit-scrollbar-thumb {
     border-radius: 20px;
-    background-color: #fcc3cf;
+    background-color: rgb(129,226,188);
     border: 3px solid #DFE9EB;
 }
   
 .img-container::-webkit-scrollbar-thumb:hover {
-    background-color: #ffb7c5;
+    background-color: rgb(129,226,188);
 }
   
 .img-container::-webkit-scrollbar-thumb:active {
-    background-color: #ffb7c5;
+    background-color: rgb(129,226,188);
 }
   
   
