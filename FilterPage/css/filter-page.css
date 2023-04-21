@@ -58,6 +58,7 @@
     100% { opacity: 1; }
 }
 
+/* Downsizes the See-attle logo */
 .downsizeLogo { 
     margin-left: 20px;
     height: 84px;
@@ -73,14 +74,12 @@
     gap: 50px;
 }
 
+/* Gives the header proper margins */
 .headerStyle {
     margin-bottom: 50px;
 }
 
-.h1Style {
-    padding-left: 15px;
-}
-
+/* Fixes the footer to the bottom of the page and makes it wide enough to fit the page */
 .footerStyle {
     position: fixed;
     bottom: 0;
@@ -88,6 +87,7 @@
     width: 100%;
 }
 
+/* Styles the container of the footer by giving it a background color, padding, etc */
 .container.footerDivStyle {
     background-color: rgb(30, 30, 30);
     flex-direction: row;
@@ -95,6 +95,7 @@
     padding-bottom: 5px;
 }
 
+/* Styles the text in the footer by giving it proper margins, padding, and color */
 .footerDivTextStyle {
     color: white;
     margin: 3px;
@@ -102,15 +103,18 @@
     padding-left: 10px;
 }
 
+/* Underlines the item with this class when it is hovered over */
 .underline:hover {
     text-decoration: underline;
 }
 
+/* Creates a standard for the size of the images in the trending activities section */
 .imgStyle {
     height: 300px;
     width: 400px;
 }
 
+/* Creates a container for the trending activities images  */
 .img-container {
     flex-direction: row;
     overflow-x: auto;
@@ -120,11 +124,13 @@
     
 }
 
-.h2Style {
+/* Style for centered h1 */
+.h1Style {
     text-align: center;
     margin-top: 30px;
 }
 
+/* Styles the container for the trending activity images by giving it a shadow, rounded corners, and other stylings */
 .imgContainerStyle {
     background-color: white;
     padding: 10px;
@@ -139,44 +145,53 @@
     border-radius: 10px;
     border-style: solid;
 }
-  
+
+/* Specifies the width of the scroll bar contained within the image container */
 .img-container::-webkit-scrollbar {
     width: 15px;
     width: 15px;
 }
 
+/* Gives rounded corners and a background to scroll bar track contained within the image container */
 .img-container::-webkit-scrollbar-track {
     border-radius: 4px;
     background-color: #DFE9EB;
 }
-  
+
+/* Specifies the background color of the scroll bar track when it is hovered over */
 .img-container::-webkit-scrollbar-track:hover {
     background-color: #DFE9EB;
 }
   
+/* Specifies the background color of the scroll bar track when it is in the active status */
 .img-container::-webkit-scrollbar-track:active {
     background-color: #DFE9EB;
 }
   
+/* Specifies the color, radius, and border of the scroll thumb */
 .img-container::-webkit-scrollbar-thumb {
     border-radius: 20px;
     background-color: rgb(129,226,188);
     border: 3px solid #DFE9EB;
 }
   
+/* Specifies the background color of the scroll bar thumb when it is hovered over */
 .img-container::-webkit-scrollbar-thumb:hover {
     background-color: rgb(129,226,188);
 }
   
+/* Specifies the background color of the scroll bar thumb when it is in the active status */
 .img-container::-webkit-scrollbar-thumb:active {
     background-color: rgb(129,226,188);
 }
   
+/* removes the underline (and all other text decorations) from a */
 a {
     text-decoration: none;
 }
-  
-  .overlay {
+
+/* Fades out the background when filter page appears  */
+.overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -186,13 +201,15 @@ a {
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
-  }
-  .overlay:target {
+}
+
+.overlay:target {
     visibility: visible;
     opacity: 1;
-  }
+}
   
-  .popup {
+/* Fades the popup onto the screen */
+.popup {
     margin: 70px auto;
     padding: 20px;
     background: #fff;
@@ -201,14 +218,17 @@ a {
     height: 75%;
     position: relative;
     transition: all 5s ease-in-out;
-  }
+}
   
-  .popup h2 {
+/* Specifies the heading font for the popup */
+.popup h2 {
     margin-top: 0;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
-  }
-  .popup .close {
+}
+
+/* Specifies the style and location of the exit button in the popup menu */
+.popup .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -217,20 +237,25 @@ a {
     font-weight: bold;
     text-decoration: none;
     color: #333;
-  }
-  .popup .close:hover {
+}
+
+/* Specifies the color of the exit button on the popup menu when it is hovered over */
+.popup .close:hover {
     color: rgba(129,226,188,1);
-  }
-  .popup .content {
+}
+  
+/* Sets a max height for the content in the popup and otherwise it overflows */
+.popup .content {
     max-height: 30%;
     overflow: auto;
-  }
+}
   
-  @media screen and (max-width: 700px){
-    .box{
+/* Sets a max width for the screen */
+@media screen and (max-width: 700px){
+    .box {
       width: 70%;
     }
-    .popup{
+    .popup {
       width: 70%;
     }
-  }
+}
