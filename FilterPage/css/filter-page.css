@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 /* Sets the style for the body of the webpage, this should be uniform across all pages */
@@ -48,8 +49,8 @@
 }
 
 /* Creates a fade in animation for the buttons */
-.fade-in-p { 
-    animation: fadeIn 6s; 
+.fade-in-p {
+    animation: fadeIn 6s;
 }
 
 /* Sets the opacity transition for the fade in animation */
@@ -59,7 +60,7 @@
 }
 
 /* Downsizes the See-attle logo */
-.downsizeLogo { 
+.downsizeLogo {
     margin-left: 20px;
     height: 84px;
     width: 84px;
@@ -121,7 +122,6 @@
     gap: 20px;
     width: 95%;
     border-radius: 10px;
-    
 }
 
 /* Style for centered h1 */
@@ -137,10 +137,10 @@
     width: 60vw;
     margin: auto;
     margin-bottom: 125px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
-                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                rgba(0, 0, 0, 0.12) 0px -12px 30px,
                 rgba(0, 0, 0, 0.12) 0px 4px 6px,
-                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                rgba(0, 0, 0, 0.17) 0px 12px 13px,
                 rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 10px;
     border-style: solid;
@@ -162,29 +162,29 @@
 .img-container::-webkit-scrollbar-track:hover {
     background-color: #DFE9EB;
 }
-  
+
 /* Specifies the background color of the scroll bar track when it is in the active status */
 .img-container::-webkit-scrollbar-track:active {
     background-color: #DFE9EB;
 }
-  
+
 /* Specifies the color, radius, and border of the scroll thumb */
 .img-container::-webkit-scrollbar-thumb {
     border-radius: 20px;
     background-color: rgb(129,226,188);
     border: 3px solid #DFE9EB;
 }
-  
+
 /* Specifies the background color of the scroll bar thumb when it is hovered over */
 .img-container::-webkit-scrollbar-thumb:hover {
     background-color: rgb(129,226,188);
 }
-  
+
 /* Specifies the background color of the scroll bar thumb when it is in the active status */
 .img-container::-webkit-scrollbar-thumb:active {
     background-color: rgb(129,226,188);
 }
-  
+
 /* removes the underline (and all other text decorations) from a */
 a {
     text-decoration: none;
@@ -207,7 +207,7 @@ a {
     visibility: visible;
     opacity: 1;
 }
-  
+
 /* Fades the popup onto the screen */
 .popup {
     margin: 70px auto;
@@ -219,7 +219,7 @@ a {
     position: relative;
     transition: all 5s ease-in-out;
 }
-  
+
 /* Specifies the heading font for the popup */
 .popup h2 {
     margin-top: 0;
@@ -243,13 +243,13 @@ a {
 .popup .close:hover {
     color: rgba(129,226,188,1);
 }
-  
+
 /* Sets a max height for the content in the popup and otherwise it overflows */
 .popup .content {
     max-height: 30%;
     overflow: auto;
 }
-  
+
 /* Sets a max width for the screen */
 @media screen and (max-width: 700px){
     .box {
@@ -259,3 +259,4 @@ a {
       width: 70%;
     }
 }
+
