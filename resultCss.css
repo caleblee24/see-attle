@@ -1,0 +1,168 @@
+body {
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  margin: 0;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main > div {
+  display: flex;
+  height: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+html {
+  height: 100%;
+}
+
+.result-selection-big {
+  flex: 1;
+  background-color: rgba(241, 241, 241, 0.519);
+  overflow: scroll;
+  height: 100vh;
+}
+
+.result-list {
+  flex-basis: 40%;
+  /* background-color: #d5d8fc9f; */
+  box-shadow: 5px 0px 10px  rgba(120, 120, 120, 0.197);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: scroll;
+  height: 100vh;
+}
+
+.result-list, .result-selection-big {
+  padding: 1em;
+}
+
+.result-list > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-card {
+  display: flex;
+  align-items: center;
+}
+
+.result-imgs {
+  width: 130px;
+  margin: 0 20px;
+  border-radius: 5px;
+  box-shadow: 6px 6px #1481BA;
+}
+
+.result-rating {
+  color: #FFBF46;
+}
+
+.result-tags {
+  display: flex;
+}
+
+.result-tags-items {
+  padding: 5px 10px;
+  background-color: #1481BA;
+  margin: 0px 3px;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.result-card h2 {
+  margin-bottom: 5px;
+}
+
+.result-card:hover {
+  box-shadow: 0px 0px 10px  rgba(120, 120, 120, 0.319);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.result-selection-big h1 {
+  overflow: hidden;
+  text-align: center;
+  font-size: 35px;
+  background-image: linear-gradient(#cecece79 0 0);
+  background-position: bottom center;
+  background-size: 80% 2px;
+  background-repeat: no-repeat;
+  padding-bottom: 5px;
+}
+
+.result-selection-imgs {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px  rgba(120, 120, 120, 0.532);
+}
+
+.result-selection-img-container {
+  position: relative;
+  margin: 0px 10px;
+}
+
+.res-sel-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 15px 6px 15px;
+  background-color: #d1d1f9b7;
+  color: white;
+  margin-right: 3px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.res-sel-btn:hover {
+  background-color: #d1d1f9e5;
+  transition: all 0.4s ease;
+}
+
+.result-selection-big > div {
+  display: flex;
+}
+
+.res-sel-desc {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.res-sel-img-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desc-bookmark-container {
+  display: flex;
+}
+
+.fa-regular.fa-bookmark {
+  font-size: 30px;
+  margin: 4px;
+  color: #FFBF46;
+  -webkit-text-stroke: 1px white;
+}
+
+.fa-regular.fa-bookmark:hover {
+  font-size: 30px;
+  margin: 4px;
+  color: #FFBF46;
+  -webkit-text-stroke: 1px white;
+}
+
+.res-sel-info {
+  margin-right: 30px;
+}
