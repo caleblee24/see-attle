@@ -132,6 +132,8 @@ html {
   margin-right: 3px;
   font-size: 12px;
   cursor: pointer;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .res-sel-btn:hover {
@@ -217,7 +219,7 @@ html {
 }
 
 .hours {
-  flex: 1;
+  flex: 1 0;
 }
 
 .hours ul {
@@ -248,6 +250,7 @@ html {
 .profile-img {
   border-radius: 50%;
   height: 100px;
+  margin-right: 10px;
 }
 
 .card-header {
@@ -256,4 +259,19 @@ html {
 
 .profile-name{
   margin-bottom: 2px;
+}
+
+.card-header time {
+  font-size: 14px;
+  color: rgb(108, 108, 108);
+}
+
+.review-cards {
+  padding: 0px 15px;
+}
+
+.review-imgs > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
 }
