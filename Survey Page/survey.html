@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Group-BB4">
+    <meta name="description" content="Survey Page">
+    <title>Survey Page</title>
+    <link rel="stylesheet" href="Survey.css">
+</head>
+
+<header class="headerStyle">
+    <div class="container header">
+    <img class="downsizeLogo" src="imgs/See-attleIcon.svg" alt="seattle icon">
+    <p class="underline">DropDown1</p>
+    <p class="underline">DropDown2</p>
+    <p class="underline">DropDown3</p>
+    <p class="underline">Settings</p>
+    </div>
+</header>
+
+<body>
+    <div class="container containerText">
+        <h1>Activities Survey</h1>
+        <p>Please answer the following questions to help us suggest some fun activities for you!</p>
+        <form>
+            <div class="question">
+                <label for="location">Where are you located?</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="question">
+                <label for="activity">What type of casual activity are you interested in?</label>
+                <select id="activity" name="activity" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="Cafe">Cafe</option>
+                    <option value="Parks">Parks</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Capitol Hill">Capitol Hill</option>
+                    <option value="Cherry Blossoms">Cherry Blossoms</option>
+                    <option value="UW Quad">UW Quad</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="budget">What is your budget for this activity?</label>
+                <span>$0</span>
+                <input type="range" id="budget" name="budget" min="0" max="500" step="10" value="50">
+                <span>$500</span>
+            </div>
+            <div class="question">
+                <label for="duration">How long do you want your activity to be?</label>
+                <input type="radio" id="duration1" name="duration" value="1" required>
+                <label for="duration1">1 hour</label>
+                <input type="radio" id="duration2" name="duration" value="2" required>
+                <label for="duration2">2 hours</label>
+                <input type="radio" id="duration3" name="duration" value="3" required>
+                <label for="duration3">3 hours</label>
+            </div>
+            <div class="question">
+                <label for="age">What is your age group?</label>
+                <select id="age" name="age" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="18-25">18-25</option>
+                    <option value="26-35">26-35</option>
+                    <option value="36-45">36-45</option>
+                    <option value="46-55">46-55</option>
+                    <option value="55+">55+</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="transportation">How do you plan to get to the activity?</label>
+                <input type="radio" id="transportation1" name="transportation" value="Car" required>
+                <label for="transportation1">Car</label>
+                <input type="radio" id="transportation2" name="transportation" value="Public Transportation" required>
+                <label for="transportation2">Public Transportation</label>
+                <input type="radio" id="transportation3" name="transportation" value="Walk/Bike" required>
+                <label for="transportation3">Walk/Bike</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+<footer class="footerStyle">
+    <div class="container footerDivStyle">
+    <p class="footerDivTextStyle underline">Contact Us</p>
+    <p class="footerDivTextStyle underline">Terms</p>
+    <p class="footerDivTextStyle underline">Privacy</p>
+    <p class="footerDivTextStyle"> &#169; Info 340: Group-BB4</p>
+    </div>
+</footer>
+
+</html>
