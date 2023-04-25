@@ -26,12 +26,16 @@
       <section class="result-list">
 
         <h1>Results</h1>
+          <a  class="nav-back" href="FilterPage/filter-page.html">
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>Back to filter</p>
+          </a>
 
-        <div>
+        <div class="result-cards-container">
 
           <div class="result-card">
             <div>
-              <img class="result-imgs" src="imgs/seattle-meow.jpeg" alt="Cafe area inside Seattle Meowtropolitan, a cat cafe.">
+              <img class="result-imgs" src="imgs/seattle-meowtropolitan.jpg" alt="Cup of latte with cat latte foam art.">
             </div>
             <div>
               <h2 class="result-name">Seattle Meowtropolitan</h2>
@@ -53,8 +57,8 @@
 
           <div class="result-card">
             <div>
-              <img class="result-imgs" src="imgs/twice-sold-tales.jpeg"
-                alt="Cat sitting on a bookshelf inside of Twice Sold Tales, a second-hand bookstore.">
+              <img class="result-imgs" src="imgs/twice-sold-tales.jpg"
+                alt="Cat laying down next to a bookshelf inside of Twice Sold Tales, a second-hand bookstore.">
             </div>
             <div>
               <h2 class="result-name">Twice Sold Tales</h2>
@@ -98,22 +102,25 @@
 
           <div class="result-card">
             <div>
-              <img class="result-imgs" src="imgs/rubber-chicken-museum.jpeg"
-                alt="Rubber chicken in front of the rubber chicken museum.">
+              <img class="result-imgs" src="imgs/rubber-chicken-museum.jpg"
+                alt="Rubber chickens inside a display case.">
             </div>
-            <div>
-              <h2 class="result-name">Rubber Chicken Museum</h2>
-              <div class="result-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
+            <div class="result-body">
+              <div>
+                <h2 class="result-name">Rubber Chicken Museum</h2>
+                <div class="result-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="result-desc">Located in the back of a novelty store in Wallingford is the rubber chicken museum. It boasts a surprisingly large number of rubber chickens. Entrance to the museum is free!</p>
               </div>
-              <p class="result-desc">Located in the back of a novelty store in Wallingford is the rubber chicken museum. It boasts a surprisingly large number of rubber chickens. Entrance to the museum is free!</p>
               <div class="result-tags">
                 <p class="result-tags-items">Free</p>
                 <p class="result-tags-items">Quirky</p>
+                <p class="result-tags-items">Museum</p>
               </div>
             </div>
           </div>
@@ -151,25 +158,77 @@
         <div>
           <div class="res-sel-img-rating">
             <div class="result-selection-img-container">
-              <img class="result-selection-imgs" src="imgs/seattle-meow.jpeg"
+              <img class="result-selection-imgs" src="imgs/seattle-meowtropolitan.jpg"
                 alt="Cafe area inside Seattle Meowtropolitan, a cat cafe.">
               <button class="res-sel-btn">See photos</button>
-            </div>
-            <div class="result-rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
+              <div class="result-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
             </div>
           </div>
 
           <div class="res-sel-info">
-           <div class="desc-bookmark-container">
+            <div class="desc-bookmark-container">
               <p class="res-sel-desc">Come stop by Seattle Meowtropolitan to play with cats while sipping on some coffee and
                 snacking on some pastries. Reservations are recommended but walk-ins are welcomed.</p>
-                <i class="fa-regular fa-bookmark"></i>
-           </div>
+              <i class="fa-regular fa-bookmark"></i>
+            </div>
+
+            <div class="res-sel-btns">
+              <button class="res-sel-btn"> <a>Write a review</a> </button>
+              <a href="https://www.google.com/maps/dir//Seattle+Meowtropolitan,+1225+N+45th+St,+Seattle,+WA+98103/@47.6612247,-122.3451245,17z/data=!4m17!1m7!3m6!1s0x549014515d4d55af:0x286b9079c052c5c7!2sSeattle+Meowtropolitan!8m2!3d47.6612247!4d-122.3429358!16s%2Fg%2F11ckvlgmzd!4m8!1m0!1m5!1m1!1s0x549014515d4d55af:0x286b9079c052c5c7!2m2!1d-122.3429396!2d47.6612801!3e3" target="_blank" rel="noopener noreferrer"><button class="res-sel-btn clear-btn"> Directions</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="reviews">
+            <h2>Reviews</h2>
+
+            <div>
+
+              <div class="review-cards">
+                <div class="card-header">
+                  <div>
+                    <img class="profile-img" src="imgs/thanh-pfp.jpg">
+                  </div>
+                  <div>
+                    <h3 class="profile-name">Thanh Ly</h3>
+                    <div class="result-rating">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="review-body">
+
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <div class="hours">
+            <h2>Operating Hours:</h2>
+            <ul>
+              <li><strong>Mon:</strong> 12-6PM</li>
+              <li><strong>Tues</strong>: 12-5Pm</li>
+              <li><strong>Weds:</strong> 12-6PM</li>
+              <li><strong>Thurs:</strong> 12-6PM</li>
+              <li><strong>Fri</strong>: 12-9PM</li>
+              <li><strong>Sat:</strong> 12-9PM</li>
+              <li><strong>Sun:</strong> 12-6PM</li>
+            </ul>
           </div>
         </div>
 
