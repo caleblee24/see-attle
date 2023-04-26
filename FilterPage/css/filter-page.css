@@ -62,27 +62,28 @@
 /* Downsizes the See-attle logo */
 .downsizeLogo {
     margin-left: 20px;
-    height: 84px;
-    width: 84px;
+    height: 80px;
+    width: 80px;
 }
 
 /* Styles the header container */
 .container.header {
-    background-color: rgb(249, 165, 134);
-    padding-top: 25px;
-    padding-bottom: 25px;
+    /* background-color: rgb(249, 165, 134); */
+    background-color: #4966bc;
+    padding-top: 15px;
+    padding-bottom: 15px;
     flex-direction: row;
     gap: 50px;
 }
 
-/* Gives the header proper margins */
-.headerStyle {
-    margin-bottom: 50px;
+/* container for footer to be in, making it relative*/
+.footer-container {
+    position: relative;
 }
 
 /* Fixes the footer to the bottom of the page and makes it wide enough to fit the page */
 .footerStyle {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -102,11 +103,13 @@
     margin: 3px;
     padding-top: 7px;
     padding-left: 10px;
+    font-size: 14px;
 }
 
 /* Underlines the item with this class when it is hovered over */
 .underline:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 /* Creates a standard for the size of the images in the trending activities section */

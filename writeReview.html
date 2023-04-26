@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="FilterPage/css/filter-page.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="/imgs/space-needle72.png" />
-  <title>Photos</title>
+  <title>Write Review</title>
 </head>
 <body class="body-styling">
   <header class="headerStyle">
@@ -22,23 +22,28 @@
   </header>
 
   <main class="flex-1">
+    <div class="review-box">
+      <div>
+        <a href="resultSelectionMS.html"><h1>Seattle Meowtropolitan</h1></a>
 
-    <div class="page-content photo-page">
-      <div class="title">
-        <a class="nav-back" href="resultSelectionMS.html">
-          <i class="fa-solid fa-chevron-left"></i>
-          <h1>Seattle Meowtropolitan</h1>
-        </a>
-      </div>
-      <div class="photos-container">
-        <img src="imgs/seattle-meow-cat.jpg" alt="Cat laying on a rug.">
-        <img src="imgs/seattle-meowtropolitan.jpg" alt="Cup of latte with cat latte foam art.">
-        <img src="imgs/seattle-meow-latte-heart.jpg"
-          alt="Cup of latte with latte foam art of a cat's head in shape of a heart.">
-        <img src="imgs/seattle-meow-earrings.jpg" alt="Cat themed earrings for sale hanging off a jewelry display.">
+        <div class="review-container">
+          <form class="review">
+            <div class="rating">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <textarea id="review" name="review" placeholder="Leave a review..." araia-label="Input review text" required></textarea>
+            <div class="review-btns">
+              <label class="res-sel-btn clear-btn"><input type="file" accept="image/png, image/jpeg"/>Upload photos</label>
+              <button class="res-sel-btn" type="submit" role="button">Submit Review</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-
   </main>
 
   <div class="footer-container">

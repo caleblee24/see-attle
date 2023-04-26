@@ -13,20 +13,25 @@
 }
 
 /* divs inside main are flexboxes */
-main > div {
+.page-content {
   display: flex;
   height: 100%;
 }
 
-/* Giving main flex 1 */
-main {
+/* Giving the containers flex 1 */
+.flex-1 {
   flex: 1;
+}
+
+/* adding padding at the bottom to make space for footer*/
+main {
+  padding-bottom: 10px;
 }
 
 /* Setting overall font-size and height for html file */
 html {
   height: 100%;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* overall behavior of the result selection page (on larger screens its the right panel) */
@@ -37,7 +42,6 @@ html {
   height: 100vh;
 }
 
-
 /* overall behavior of the result list page (on larger screens its the left panel) */
 .result-list {
   flex-basis: 500px;
@@ -47,7 +51,6 @@ html {
   overflow: scroll;
   height: 100vh;
 }
-
 
 /* adding padding to both panels */
 .result-list, .result-selection {
@@ -89,7 +92,7 @@ html {
 }
 
 /* styling the result card's stars (aka rating) */
-.result-rating {
+.rating, .result-rating {
   color: #FFBF46;
   font-size: .9rem;
 }
@@ -284,7 +287,7 @@ html {
 }
 
 /* making sure the anchor tag remains black */
-.nav-back:visited, .nav-back:active {
+.nav-back:visited, .nav-back:active, .review-box a:visited, .review-box a {
   color: black;
 }
 
@@ -376,11 +379,58 @@ main > .photo-page {
   display: none;
 }
 
+/* making the reviews container a flexbox to position items */
+.review-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* adjusting textarea's border and sizing  */
+.review-container textarea {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(118, 118, 118);
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 600px;
+  height: 300px;
+}
+
+/* adjusting review box's heading  */
+.review-box h1 {
+  margin-bottom: 2px;
+  font-size: 22px;
+}
+
+/* making the form a flexbox to position items */
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* styling the buttons in the review box */
+.review .res-sel-btn {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+/* hiding the input file default button  */
+input[type="file"] {
+  display: none;
+}
+
+/* making the review buttons container a flexbox to position items  */
+.review-btns {
+  display: flex;
+}
+
 /* Sets a max width for the screen */
 @media screen and (max-width: 1200px){
   /* adjusting font size */
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   /* adjuting display img of result selection */
@@ -412,7 +462,7 @@ main > .photo-page {
 @media screen and (max-width: 900px){
   /* adjusting font size */
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   /* adjusting img size for photos in photo page */
@@ -421,13 +471,19 @@ main > .photo-page {
     max-height: 200px;
   }
 
+  /* adjusting the textarea input box */
+  .review-container textarea {
+    width: 500px;
+    height: 300px;
+  }
 }
 
 /* Sets a max width for the screen */
 @media screen and (max-width: 600px){
   /* adjusting font size */
   html {
-    font-size: 14px;
+    font-size: 12px;
+    width: 100%;
   }
 
   /* adjuting display img of result selection */
@@ -463,4 +519,9 @@ main > .photo-page {
     max-height: 140px;
   }
 
+  /* adjusting the textarea input box */
+  .review-container textarea {
+    width: 400px;
+    height: 300px;
+  }
 }
