@@ -273,10 +273,6 @@ a {
   padding: 0;
 }
 
-.addPlaceBody {
-  font-family: sans-serif;
-}
-
 /*style for main div content of login, create account, and pw change page. */
 .loginContainer, .accountContainer, .pwContainer, .addPlaceContainer {
   display: flex;
@@ -373,9 +369,23 @@ textarea {
   margin-bottom: 20px;
 }
 
+.saved-bookmark-container {
+  position: relative;
+}
+
+.saved-bookmark-container .fa-solid.fa-bookmark {
+  color: #FFBF46;;
+  top: 0px;
+  right: 10px;
+  position: absolute;
+}
 
 @media(max-width: 589px) {
   .headerStyle {
+    display: none;
+  }
+
+  footer {
     display: none;
   }
 
@@ -397,11 +407,6 @@ textarea {
     height: inherit;
     display: flex;
     flex-direction: column;
-  }
-
-  /* border box sizing for evberything */
-  * {
-    box-sizing: border-box;
   }
 
   /* divs inside main are flexboxes */
@@ -627,7 +632,7 @@ textarea {
   }
 
   /* styling the bookmark icon */
-  .fa-regular.fa-bookmark {
+  .fa-regular.fa-bookmark{
     font-size: 1.8rem;
     margin: 4px;
     color: #FFBF46;
