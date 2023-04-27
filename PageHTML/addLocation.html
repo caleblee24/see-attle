@@ -1,33 +1,42 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="utf-8">
-      <meta name="author" content="Group-BB4">
-      <meta name="description" content="Create Account Page">
-      <title>Add Location</title>
-      <link rel="stylesheet" href="../PageCSS/filter-page.css">
-      <link rel="icon" type="image/png" href="../PageIMGS/See-attleIcon.svg" />
+    <meta charset="utf-8" />
+    <meta name="author" content="Group-BB4" />
+    <meta name="description" content="Create Account Page" />
+    <title>Add Location</title>
+    <link rel="stylesheet" href="../PageCSS/filter-page.css" />
+    <link rel="icon" type="image/png" href="../PageIMGS/See-attleIcon.svg" />
   </head>
 
-  <body class="addPlaceBody">
-    <div class="addPlaceContainer">
-      <div class="addPlaceForm">
+  <body class="add-place-body">
+    <div class="add-place-container">
+      <div class="add-place-form">
         <h1>Add Place</h1>
         <p>Provide information about place in Seattle that you would like to share with others.</p>
-        <form class = "addPlace" action="submit-form.php" method="post">
+        <form class="add-place" action="submit-form.php" method="post">
           <label for="place-name">Place Name:</label>
-          <input type="text" id="place-name" name="place-name" placeholder="eg. Seattle Meowtropolitan" required>
+          <input type="text" id="place-name" name="place-name" placeholder="eg. Seattle Meowtropolitan" required aria-label="Enter place name" />
           <label for="address">Address:</label>
-          <input type="text" id="address" name="address" placeholder="eg. 1225 N 45th St, Seattle, WA 98103" required>
+          <input type="text" id="address" name="address" placeholder="eg. 1225 N 45th St, Seattle, WA 98103" required aria-label="Enter place address" />
           <label for="tags">Tags:</label>
-          <input type="text" id="tags" name="tags" placeholder="eg. cafe, free, kitties">
+          <input type="text" id="tags" name="tags" placeholder="eg. cafe, free, kitties" aria-label="Enter tags related to the place" />
           <label for="description">Description:</label>
-          <textarea id="description" name="description"></textarea>
+          <textarea id="description" name="description" aria-label="Enter description of the place"></textarea>
           <label for="photo">Place Photo:</label>
-          <input type="file" id="photo" name="photo">
-          <button type="submit">Add Place</button>
+          <input type="file" id="photo" name="photo" aria-label="Upload a photo of the place" />
+          <button type="submit" aria-label="Submit form by cliking add place">Add Place</button>
         </form>
       </div>
     </div>
-  </body>
 
+    <footer class="footerStyle">
+      <div class="container footerDivStyle">
+        <p class="footerDivTextStyle underline">Contact Us</p>
+        <p class="footerDivTextStyle underline">Terms</p>
+        <p class="footerDivTextStyle underline">Privacy</p>
+        <p class="footerDivTextStyle">&#169; Info 340: Group-BB4</p>
+      </div>
+    </footer>
+  </body>
 </html>
