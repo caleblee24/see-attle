@@ -676,10 +676,11 @@ textarea {
     flex-direction: row;
     align-items: center;
     cursor: pointer;
+    color: black;
   }
 
   /* making sure the anchor tag remains black */
-  .nav-back:visited, .nav-back:active, .review-box a:visited, .review-box a {
+  .nav-back:visited, .nav-back:active {
     color: black;
   }
 
