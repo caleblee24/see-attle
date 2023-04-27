@@ -5,7 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../PageCSS/filter-page.css">
+  <meta name="author" content="Group-BB4: Thanh Ly, Mustafa Khan, Kacey Choi, Caleb Lee">
+  <meta name="description" content="For L and XL screens, this page displays both the results from
+  filtering and the user's selected place on the same page. The left panel lists all the matching
+  results from the user's query w/ the name of location, brief description, a picture, the ratings,
+  and a tagging system. The user can click on a result and the right panel will populate with
+  additional information about the selected result, including reviews.">
+  <link rel="stylesheet" href="../PageCSS/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="../PageIMGS//space-needle72.png" />
   <title>Results</title>
@@ -14,10 +20,18 @@
   <header class="headerStyle">
     <div class="container header">
       <img class="downsizeLogo" src="../PageIMGS/See-attleIcon.svg" alt="seattle icon">
-      <p class="underline">DropDown1</p>
-      <p class="underline">DropDown2</p>
-      <p class="underline">DropDown3</p>
-      <p class="underline">Settings</p>
+      <a href="../index.html" class="black-links"><p class="underline">Home</p></a>
+      <a href="addLocation.html" class="black-links"><p class="underline">Add a Location</p></a>
+      <a href="savedPlaces.html" class="black-links"><p class="underline">Saved Locations</p></a>
+      <div class="profileContainer revealDropDown">
+        <img class="profileImg" src="../PageIMGS/PuppyProfile.jpg" alt="cute puppy">
+        <nav>
+          <ul>
+            <li><a class="topElement" class="black-links" href="login.html">Sign In</a></li>
+            <li><a class="bottomElement" class="black-links" href="#">Sign Out</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -26,7 +40,7 @@
       <section class="result-list">
 
         <h1>Results</h1>
-          <a  class="nav-back" href="filter-page.html">
+          <a  class="nav-back" href="../index.html">
             <i class="fa-solid fa-chevron-left"></i>
             <p>Back to filter</p>
           </a>
