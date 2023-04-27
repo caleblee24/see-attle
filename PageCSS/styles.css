@@ -69,8 +69,8 @@
 
 /* Styles the header container */
 .container.header {
-  background-color: rgb(249, 165, 134);
-  /* background-color: #4966bc; */
+  /* background-color: rgb(249, 165, 134); */
+  background-color: #4966bc;
   padding-top: 15px;
   padding-bottom: 15px;
   flex-direction: row;
@@ -113,7 +113,7 @@
   left: 50%; /* Set left position to center the image horizontally */
   transform: translate(-50%, -50%); /* Translate the image to center it */
   border-radius: 50%;
-} 
+}
 
 .revealDropDown:hover {
   overflow: visible;
@@ -790,7 +790,7 @@ textarea {
   }
 
   /* making sure the anchor tag remains black */
-  .nav-back:visited, .nav-back:active {
+  .nav-back:visited, .nav-back:active, .black-links, .black-links:visited {
     color: black;
   }
 

@@ -5,20 +5,28 @@
     <meta name="author" content="Group-BB4">
     <meta name="description" content="Survey Page">
     <title>Survey Page</title>
-    <link rel="stylesheet" href="/PageCSS/filter-page.css">
+    <link rel="stylesheet" href="../PageCSS/filter-page.css">
 </head>
 
-<header class="headerStyle">
-    <div class="container header">
-    <img class="downsizeLogo" src="imgs/See-attleIcon.svg" alt="seattle icon">
-    <p class="underline">DropDown1</p>
-    <p class="underline">DropDown2</p>
-    <p class="underline">DropDown3</p>
-    <p class="underline">Settings</p>
-    </div>
-</header>
-
 <body>
+    <header class="headerStyle">
+        <div class="container header">
+          <img class="downsizeLogo" src="../PageIMGS/See-attleIcon.svg" alt="seattle icon">
+          <a href="filter-page.html"><p class="underline">Home</p></a>
+          <a href="addLocation.html"><p class="underline">Add a Location</p></a>
+          <a href="savedPlaces.html"><p class="underline">Saved Locations</p></a>
+          <div class="profileContainer revealDropDown">
+            <img class="profileImg" src="../PageIMGS/PuppyProfile.jpg" alt="cute puppy">
+            <nav>
+              <ul>
+                <li><a class="topElement" href="login.html">Sign In</a></li>
+                <li><a class="bottomElement" href="#">Sign Out</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
     <div class="container containerText">
         <h1>Activities Survey</h1>
         <p>Please answer the following questions to help us suggest some fun activities for you!</p>
