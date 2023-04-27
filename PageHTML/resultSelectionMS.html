@@ -5,7 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../PageCSS/filter-page.css">
+  <meta name="author" content="Group-BB4: Thanh Ly, Mustafa Khan, Kacey Choi, Caleb Lee">
+  <meta name="description" content="For M and smaller screens, this page displays the user's
+  selected result. It will populate with additional information about the selected result,
+  including reviews and directions to the location.">
+  <link rel="stylesheet" href="../PageCSS/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="../PageIMGS//space-needle72.png" />
   <title>Results</title>
@@ -14,7 +18,7 @@
   <header class="headerStyle">
     <div class="container header">
       <img class="downsizeLogo" src="../PageIMGS/See-attleIcon.svg" alt="seattle icon">
-      <a href="filter-page.html" class="black-links"><p class="underline">Home</p></a>
+      <a href="../index.html" class="black-links"><p class="underline">Home</p></a>
       <a href="addLocation.html" class="black-links"><p class="underline">Add a Location</p></a>
       <a href="savedPlaces.html" class="black-links"><p class="underline">Saved Locations</p></a>
       <div class="profileContainer revealDropDown">
@@ -31,111 +35,6 @@
 
   <main class="flex-1">
     <div class="page-content">
-      <section class="result-list hidden">
-
-        <h1>Results</h1>
-          <a  class="nav-back" href="filter-page.html">
-            <i class="fa-solid fa-chevron-left"></i>
-            <p>Back to filter</p>
-          </a>
-
-        <div class="result-cards-container">
-
-          <div class="result-card">
-            <div>
-              <img class="result-imgs" src="../PageIMGS/seattle-meowtropolitan.jpg" alt="Cup of latte with cat latte foam art.">
-            </div>
-            <div>
-              <h2 class="result-name">Seattle Meowtropolitan</h2>
-              <div class="result-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <p class="result-desc">Come stop by Seattle Meowtropolitan to play with cats while sipping on some coffee and
-                snacking on some pastries. Reservations are recommended but walk-ins are welcomed.</p>
-              <div class="result-tags">
-                <p class="result-tags-items">Cafe</p>
-                <p class="result-tags-items">Kitties</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="result-card">
-            <div>
-              <img class="result-imgs" src="../PageIMGS/twice-sold-tales.jpg"
-                alt="Cat laying down next to a bookshelf inside of Twice Sold Tales, a second-hand bookstore.">
-            </div>
-            <div>
-              <h2 class="result-name">Twice Sold Tales</h2>
-              <div class="result-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-              </div>
-              <p class="result-desc">Search through the numerous second-hand books at this bookstore. Maybe while you're
-                searching for your next read, you'll run into one of the live-in kitties! </p>
-              <div class="result-tags">
-                <p class="result-tags-items">Bookstore</p>
-                <p class="result-tags-items">Kitties</p>
-                <p class="result-tags-items">Thrifting</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="result-card">
-            <div>
-              <img class="result-imgs" src="../PageIMGS/rubber-chicken-museum.jpg"
-                alt="Rubber chickens inside a display case.">
-            </div>
-            <div class="result-body">
-              <div>
-                <h2 class="result-name">Rubber Chicken Museum</h2>
-                <div class="result-rating">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-                <p class="result-desc">Located in the back of a novelty store in Wallingford is the rubber chicken museum. It boasts a surprisingly large number of rubber chickens. Entrance to the museum is free!</p>
-              </div>
-              <div class="result-tags">
-                <p class="result-tags-items">Free</p>
-                <p class="result-tags-items">Museum</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="result-card">
-            <div>
-              <img class="result-imgs" src="../PageIMGS/archie-mcphee.jpg"
-                alt="A 2d cartoon cutout of a alien baby-esque cartoon holding a bulb with a human head. The cartoon is plastered on the outside wall of Archie Mcphee, a novelty store">
-            </div>
-            <div>
-              <h2 class="result-name">Archie McPhee</h2>
-              <div class="result-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-              </div>
-              <p class="result-desc">A novelty store located in Wallingford. Home to the Rubber Duck Museum and the Wallingford Beast. </p>
-              <div class="result-tags">
-                <p class="result-tags-items">Store</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-
       <section class="result-selection flex-auto">
         <a  class="nav-back" href="resultListMS.html">
           <i class="fa-solid fa-chevron-left"></i>

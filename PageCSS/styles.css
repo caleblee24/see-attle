@@ -525,11 +525,6 @@ textarea {
     flex: 1;
   }
 
-  /* adding padding at the bottom to make space for footer*/
-  main {
-    padding-bottom: 10px;
-  }
-
   /* Setting overall font-size and height for html file */
   html {
     height: 100%;
