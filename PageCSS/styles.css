@@ -518,7 +518,7 @@ nav li:hover>a {
 
 /* basic styling for form boxes of pages */
 .login-box, .account-box, .pw-find-form, .add-place-form {
-  width: 50%;
+  width: 35%;
   height: auto;
   background-color: white;
   color: black;
@@ -579,12 +579,13 @@ select {
   border-radius: 20px;
 }
 
+/* set margins for fieldset in feedback form */
 fieldset:first-of-type {
   margin-bottom: 30px;
 }
 
 /* style for submit buttons of forms */
-button[type=submit], .feedback-submit {
+.login-button, .account button, .reset-pw, .add-place button, .question button[type="submit"], .feedback-submit {
 	color: white;
   background: #4966bc;
   padding: 15px 20px;
