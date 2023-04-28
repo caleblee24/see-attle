@@ -5,25 +5,43 @@
     <meta name="author" content="Group-BB4">
     <meta name="description" content="Survey Page">
     <title>Survey Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <link rel="stylesheet" href="../PageCSS/styles.css">
+    <link rel="icon" type="image/png" href="../PageIMGS//space-needle72.png" />
 </head>
 
-  <body class="survey-body">
-    <header class="headerStyle">
-      <div class="container header">
-        <img class="downsizeLogo" src="../PageIMGS/See-attleIcon.svg" alt="seattle icon">
-        <a href="../index.html" class="black-links"><p class="underline">Home</p></a>
-        <a href="../PageHTML/addLocation.html" class="black-links"><p class="underline">Add a Location</p></a>
-        <a href="../PageHTML/savedPlaces.html" class="black-links"><p class="underline">Saved Locations</p></a>
+  <body class="survey-body body-styling">
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="../index.html">
+            <img class="downsizeLogo" src="../PageIMGS/See-attleIcon.svg" alt="seattle icon"></a>
+        </div>
+        <ul class="links">
+          <li><a href="../index.html" class="black-links"><p class="underline">Home</p></a></li>
+          <li><a href="addLocation.html" class="black-links"><p class="underline">Add a Location</p></a></li>
+          <li><a href="savedPlaces.html" class="black-links"><p class="underline">Saved Locations</p></a></li>
+        </ul>
         <div class="profileContainer revealDropDown">
           <img class="profileImg" src="../PageIMGS/PuppyProfile.jpg" alt="cute puppy">
           <nav>
             <ul>
-              <li><a class="topElement" class="black-links" href="PageHTML/login.html">Sign In</a></li>
+              <li><a class="topElement" class="black-links" href="login.html">Sign In</a></li>
               <li><a class="bottomElement" class="black-links" href="#">Sign Out</a></li>
             </ul>
           </nav>
         </div>
+        <div class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown-menu">
+        <li><a href="../index.html" class="black-links">Home</a></li>
+        <li><a href="addLocation.html" class="black-links">Add a Location</a></li>
+        <li><a href="savedPlaces.html" class="black-links">Saved Locations</a></li>
+        <li><a class="topElement" class="black-links" href="login.html">Sign In</a></li>
+        <li><a class="bottomElement" class="black-links" href="#">Sign Out</a></li>
       </div>
     </header>
 

@@ -5,7 +5,7 @@
       <meta name="author" content="Group-BB4: Thanh Ly, Mustafa Khan, Kacey Choi, Caleb Lee">
       <meta name="description" content="The following page will have users add information about a place they want to add to the website and share publicly.">
       <title>Add Location</title>
-      <link rel="stylesheet" href="../PageCSS/styles.css">
+      <link rel="stylesheet" href="../PageCSS/filter-page.css">
       <link rel="icon" type="image/png" href="../PageIMGS/See-attleIcon.svg" />
   </head>
 
@@ -28,6 +28,40 @@
   </header>
 
   <body class="add-place-body">
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="../index.html">
+            <img class="downsizeLogo" src="../PageIMGS/See-attleIcon.svg" alt="seattle icon"></a>
+        </div>
+        <ul class="links">
+          <li><a href="../index.html" class="black-links"><p class="underline">Home</p></a></li>
+          <li><a href="addLocation.html" class="black-links"><p class="underline">Add a Location</p></a></li>
+          <li><a href="savedPlaces.html" class="black-links"><p class="underline">Saved Locations</p></a></li>
+        </ul>
+        <div class="profileContainer revealDropDown">
+          <img class="profileImg" src="../PageIMGS/PuppyProfile.jpg" alt="cute puppy">
+          <nav>
+            <ul>
+              <li><a class="topElement" class="black-links" href="login.html">Sign In</a></li>
+              <li><a class="bottomElement" class="black-links" href="#">Sign Out</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown-menu">
+        <li><a href="../index.html" class="black-links">Home</a></li>
+        <li><a href="addLocation.html" class="black-links">Add a Location</a></li>
+        <li><a href="savedPlaces.html" class="black-links">Saved Locations</a></li>
+        <li><a class="topElement" class="black-links" href="login.html">Sign In</a></li>
+        <li><a class="bottomElement" class="black-links" href="#">Sign Out</a></li>
+      </div>
+    </header>
+
     <div class="add-place-container">
       <div class="add-place-form">
         <h1>Add Place</h1>

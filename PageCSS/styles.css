@@ -63,8 +63,8 @@
 /* Downsizes the See-attle logo */
 .downsizeLogo {
   margin-left: 20px;
-  height: 80px;
-  width: 80px;
+  height: 65px;
+  width: 65px;
 }
 
 /* Styles the header container */
@@ -103,8 +103,8 @@
 }
 
 .profileImg {
-  max-width: 100%; /* Set the image's max-width to 100% of container */
-  max-height: 100%; /* Set the image's max-height to 100% of container */
+  max-width: 60px; /* Set the image's max-width to 100% of container */
+  max-height: 60px; /* Set the image's max-height to 100% of container */
   width: auto; /* Set the image's width to auto to maintain aspect ratio */
   height: auto; /* Set the image's height to auto to maintain aspect ratio */
   aspect-ratio: 1/1;
@@ -113,10 +113,96 @@
   left: 50%; /* Set left position to center the image horizontally */
   transform: translate(-50%, -50%); /* Translate the image to center it */
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .revealDropDown:hover {
   overflow: visible;
+}
+
+/* no bullets for the lists in navbar and dropdown*/
+.links li, .dropdown-menu li {
+  list-style: none;
+}
+
+/* styling header */
+header a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+
+/* when these specific elements are hovered or active, turn it white*/
+.links a:hover, .dropdown-menu a:hover, .links li:has(> .active):hover,
+.dropdown-menu li .active {
+  color: white;
+}
+
+/* header itself styling*/
+header {
+  position: relative;
+  padding: 0 0;
+}
+
+/* navbar styling */
+.navbar {
+  width: 100%;
+  height: 80px;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4966bc;
+}
+
+/* when links in navbar expanded are hovered, underline it*/
+.links li:has(> .active) {
+  text-decoration: underline;
+}
+
+/* spacing the links */
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+/* styling the toggle btn aka hamburger */
+.navbar .toggle-btn {
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 10px;
+  display: none;
+}
+
+/* styling the dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background-color: rgb(201, 166, 133);
+  /* backdrop-filter: blur(10px); */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 3;
+}
+
+/* styling the links in the dropdown menu*/
+.dropdown-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* when links in dropdown are hovered change the background of div to slightly darken*/
+.dropdown-menu li:hover {
+  background-color: rgba(255, 255, 255, 0.112);
 }
 
 /* container for footer to be in, making it relative*/
@@ -137,6 +223,7 @@
   flex-direction: row;
   gap: 20px;
   padding-bottom: 5px;
+  display: flex;
 }
 
 /* Styles the text in the footer by giving it proper margins, padding, and color */
@@ -516,16 +603,40 @@ textarea,
   font-size: 1.5rem;
 }
 
+.fa-solid.fa-bars {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
 /* responsive screeen style for mobile */
 @media(max-width: 589px) {
-  .headerStyle {
+  /* hiding other navbar stuff thats not logo or burger */
+  .navbar .links, .profileContainer {
     display: none;
   }
 
-  footer {
-    display: none;
+  /* displaying hamburger */
+  .navbar .toggle-btn {
+    display: block;
   }
 
+  /* displaying dropdown-menu */
+  .dropdown-menu {
+    display: block;
+  }
+
+  /* giving dropdown-menu height so its actually displayed when navbar or menu itself is hovered,
+  this is temporary for mock up bc no javascript */
+  .navbar:hover + .dropdown-menu, .dropdown-menu:hover {
+    height: 240px;
+  }
+
+  /* making footer change flex directions to column */
+  .container.footerDivStyle {
+    flex-direction: column;
+    gap: 0px;
+  }
 
   .login-body {
     background-image: url("https://w0.peakpx.com/wallpaper/484/491/HD-wallpaper-seattle-skyline-city-night-seattle-skyline.jpg");
