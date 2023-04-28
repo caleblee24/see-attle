@@ -395,7 +395,7 @@ nav li:hover > a {
 
 /* basic styling for form boxes of pages */
 .login-box, .account-box, .pw-find-form, .add-place-form {
-  width: 35%;
+  width: 50%;
   height: auto;
   background-color: white;
   color: black;
@@ -531,10 +531,17 @@ textarea,
     background-image: url("https://w0.peakpx.com/wallpaper/484/491/HD-wallpaper-seattle-skyline-city-night-seattle-skyline.jpg");
   }
 
+  .login-box, .account-box, .pw-find-form, .add-place-form {
+    width: 60%;
+  }
+
+  .add-place input::placeholder {
+    display: none;
+  }
+
   .account-box, .loginbox, .pw-find-form{
     width: 50%;
   }
-
 }
 
 /* Styling the body of the result pages, including result list and result selection */
