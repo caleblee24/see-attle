@@ -508,7 +508,7 @@ nav li:hover>a {
 }
 
 /* style for main div content of login, create account, and pw change page. */
-.login-container, .account-container, .pw-container, .add-place-container, .survey-container {
+.login-container, .account-container, .pw-container, .add-place-container, .survey-container, .feedback-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -584,7 +584,7 @@ fieldset:first-of-type {
 }
 
 /* style for submit buttons of forms */
-.login-button, .account button, .reset-pw, .add-place button, .question button[type="submit"] {
+button[type=submit], .feedback-submit {
 	color: white;
   background: #4966bc;
   padding: 15px 20px;
