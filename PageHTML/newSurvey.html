@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Group-BB4">
+    <meta name="description" content="Survey Page">
+    <title>Survey Page</title>
+    <link rel="stylesheet" href="../PageCSS/styles.css">
+</head>
+
+  <body class="survey-body">
+    <header class="headerStyle">
+      <div class="container header">
+        <img class="downsizeLogo" src="../PageIMGS/See-attleIcon.svg" alt="seattle icon">
+        <a href="../index.html" class="black-links"><p class="underline">Home</p></a>
+        <a href="../PageHTML/addLocation.html" class="black-links"><p class="underline">Add a Location</p></a>
+        <a href="../PageHTML/savedPlaces.html" class="black-links"><p class="underline">Saved Locations</p></a>
+        <div class="profileContainer revealDropDown">
+          <img class="profileImg" src="../PageIMGS/PuppyProfile.jpg" alt="cute puppy">
+          <nav>
+            <ul>
+              <li><a class="topElement" class="black-links" href="PageHTML/login.html">Sign In</a></li>
+              <li><a class="bottomElement" class="black-links" href="#">Sign Out</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="survey-container">
+        <div class="survey-box">
+          <h1>Activities Survey</h1>
+          <p>Please answer the following questions to help us suggest some fun activities for you!</p>
+
+          <form class="survey-question">
+            <div class="question">
+              <label for="location">Where are you located?</label>
+              <input type="text" id="location" name="location" required placeholder="Enter street name or location name" aria-label="Location">
+            </div>
+
+            <div class="question">
+              <label for="activity">What type of casual activity are you interested in?</label>
+              <select id="activity" name="activity" required aria-label="Activity">
+                <option value="">--Please choose an option--</option>
+                <option value="Cafe">Cafe</option>
+                <option value="Parks">Parks</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Capitol Hill">Capitol Hill</option>
+                <option value="Cherry Blossoms">Cherry Blossoms</option>
+                <option value="UW Quad">UW Quad</option>
+              </select>
+            </div>
+
+            <div class="question">
+              <label for="budget">What is your budget for this activity?</label>
+              <div class="budget-range">
+                <span>$0</span>
+                <input type="range" id="budget" name="budget" min="0" max="500" step="10" value="50" aria-label="Budget">
+                <span>$500</span>
+              </div>
+            </div>
+
+            <div class="question">
+              <label for="duration">How long do you want your activity to be?</label>
+              <div class="survey-radio-btn" aria-label="Duration">
+                <input type="radio" id="duration1" name="duration" value="1" required aria-label="1 hour">
+                <label for="duration1">1 hour</label>
+                <input type="radio" id="duration2" name="duration" value="2" required aria-label="2 hours">
+                <label for="duration2">2 hours</label>
+                <input type="radio" id="duration3" name="duration" value="3" required aria-label="3+ hours">
+                <label for="duration3">3+ hours</label>
+              </div>
+            </div>
+
+            <div class="question">
+              <label for="age">What is your age group?</label>
+              <select id="age" name="age" required aria-label="Age">
+                <option value="">--Please choose an option--</option>
+                <option value="18-25">18-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-45">36-45</option>
+                <option value="46-55">46-55</option>
+                <option value="55+">55+</option>
+              </select>
+            </div>
+            <div class="question">
+              <label for="duration">How do you plan to get to your activity?</label>
+              <div class="survey-radio-btn" aria-label="Transportation">
+                <input type="radio" id="transportation1" name="transportation" value="Car" required aria-label="Car">
+                <label for="transportation1">Car</label>
+                <input type="radio" id="transportation2" name="transportation" value="Public Transportation" required aria-label="Public Transportation">
+                <label for="transportation2">Public Transportation</label>
+                <input type="radio" id="transportation3" name="transportation" value="Walk/Bike" required>
+                <label for="transportation2">Walk/Bike</label>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footerStyle">
+      <div class="container footerDivStyle">
+        <p class="footerDivTextStyle underline">Contact Us</p>
+        <p class="footerDivTextStyle underline">Terms</p>
+        <p class="footerDivTextStyle underline">Privacy</p>
+        <p class="footerDivTextStyle">&#169; Info 340: Group-BB4</p>
+      </div>
+    </footer>
+  </body>
+</html>
