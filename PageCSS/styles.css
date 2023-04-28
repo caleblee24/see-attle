@@ -21,11 +21,11 @@
   font-size: 2rem;
   color: rgb(255, 255, 255);
   text-shadow: -1px 1px 0 #999898,
-        1px 1px 0 #999898,
-       1px -1px 0 #999898,
-       -1px -1px 0 #999898;
-  background: rgb(108,218,231);
-  background: linear-gradient(0deg, rgba(108,218,231,1) 3%, rgba(129,226,188,1) 67%);
+    1px 1px 0 #999898,
+    1px -1px 0 #999898,
+    -1px -1px 0 #999898;
+  background: rgb(108, 218, 231);
+  background: linear-gradient(0deg, rgba(108, 218, 231, 1) 3%, rgba(129, 226, 188, 1) 67%);
   padding: 20px 10px;
   border: 2px;
   border-radius: 25px;
@@ -56,8 +56,13 @@
 
 /* Sets the opacity transition for the fade in animation */
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Downsizes the See-attle logo */
@@ -90,28 +95,40 @@
   border-radius: 50%;
   border-style: solid;
   border-width: 2px;
-  border-color: rgba(129,226,188,1);
+  border-color: rgba(129, 226, 188, 1);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .profileContainer {
   margin-left: auto;
-  width: 10%; /* Set the container's width */
-  height: 60px; /* Set the container's height */
-  position: relative; /* Set position relative for absolute positioning of image */
-  overflow: hidden; /* Hide any overflowing content */
+  width: 10%;
+  /* Set the container's width */
+  height: 60px;
+  /* Set the container's height */
+  position: relative;
+  /* Set position relative for absolute positioning of image */
+  overflow: hidden;
+  /* Hide any overflowing content */
 }
 
 .profileImg {
-  max-width: 60px; /* Set the image's max-width to 100% of container */
-  max-height: 60px; /* Set the image's max-height to 100% of container */
-  width: auto; /* Set the image's width to auto to maintain aspect ratio */
-  height: auto; /* Set the image's height to auto to maintain aspect ratio */
+  max-width: 60px;
+  /* Set the image's max-width to 100% of container */
+  max-height: 60px;
+  /* Set the image's max-height to 100% of container */
+  width: auto;
+  /* Set the image's width to auto to maintain aspect ratio */
+  height: auto;
+  /* Set the image's height to auto to maintain aspect ratio */
   aspect-ratio: 1/1;
-  position: absolute; /* Set position absolute to position the image within the container */
-  top: 50%; /* Set top position to center the image vertically */
-  left: 50%; /* Set left position to center the image horizontally */
-  transform: translate(-50%, -50%); /* Translate the image to center it */
+  position: absolute;
+  /* Set position absolute to position the image within the container */
+  top: 50%;
+  /* Set top position to center the image vertically */
+  left: 50%;
+  /* Set left position to center the image horizontally */
+  transform: translate(-50%, -50%);
+  /* Translate the image to center it */
   border-radius: 50%;
   object-fit: cover;
 }
@@ -121,7 +138,8 @@
 }
 
 /* no bullets for the lists in navbar and dropdown*/
-.links li, .dropdown-menu li {
+.links li,
+.dropdown-menu li {
   list-style: none;
 }
 
@@ -133,7 +151,9 @@ header a {
 }
 
 /* when these specific elements are hovered or active, turn it white*/
-.links a:hover, .dropdown-menu a:hover, .links li:has(> .active):hover,
+.links a:hover,
+.dropdown-menu a:hover,
+.links li:has(> .active):hover,
 .dropdown-menu li .active {
   color: white;
 }
@@ -270,10 +290,10 @@ header {
   margin: auto;
   margin-bottom: 75px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-              rgba(0, 0, 0, 0.12) 0px -12px 30px,
-              rgba(0, 0, 0, 0.12) 0px 4px 6px,
-              rgba(0, 0, 0, 0.17) 0px 12px 13px,
-              rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-radius: 10px;
   border-style: solid;
 }
@@ -303,18 +323,18 @@ header {
 /* Specifies the color, radius, and border of the scroll thumb */
 .img-container::-webkit-scrollbar-thumb {
   border-radius: 20px;
-  background-color: rgb(129,226,188);
+  background-color: rgb(129, 226, 188);
   border: 3px solid #DFE9EB;
 }
 
 /* Specifies the background color of the scroll bar thumb when it is hovered over */
 .img-container::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(129,226,188);
+  background-color: rgb(129, 226, 188);
 }
 
 /* Specifies the background color of the scroll bar thumb when it is in the active status */
 .img-container::-webkit-scrollbar-thumb:active {
-  background-color: rgb(129,226,188);
+  background-color: rgb(129, 226, 188);
 }
 
 /* removes the underline (and all other text decorations) from a */
@@ -373,7 +393,7 @@ a {
 
 /* Specifies the color of the exit button on the popup menu when it is hovered over */
 .popup .close:hover {
-  color: rgba(129,226,188,1);
+  color: rgba(129, 226, 188, 1);
 }
 
 /* Sets a max height for the content in the popup and otherwise it overflows */
@@ -383,10 +403,11 @@ a {
 }
 
 /* Sets a max width for the screen */
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
   .box {
     width: 70%;
   }
+
   .popup {
     width: 70%;
   }
@@ -436,7 +457,7 @@ nav ul ul {
   display: none;
 }
 
-nav ul li:hover > ul {
+nav ul li:hover>ul {
   display: block;
 }
 
@@ -449,7 +470,7 @@ nav ul ul a:hover {
   background-color: rgb(224, 199, 183);
 }
 
-nav li:hover > a {
+nav li:hover>a {
   background-color: rgb(224, 199, 183)
 }
 
@@ -471,21 +492,27 @@ nav li:hover > a {
 
 /* style for login page body */
 .login-body {
-	background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/58/Seattle_Center_as_night_falls.jpg");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/58/Seattle_Center_as_night_falls.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
+  background-size: 100% 100%;
 }
 
 /* body style for add-place and saved-place page, which will heve no margin, padding, and bg img. */
-.add-place-body, .saved-place-body {
+.add-place-body,
+.saved-place-body {
   margin: 0;
   padding: 0;
 }
 
 /* style for main div content of login, create account, and pw change page. */
-.login-container, .account-container, .pw-container, .add-place-container, .survey-container {
+.login-container,
+.account-container,
+.pw-container,
+.add-place-container,
+.survey-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -494,7 +521,10 @@ nav li:hover > a {
 }
 
 /* basic styling for form boxes of pages */
-.login-box, .account-box, .pw-find-form, .add-place-form {
+.login-box,
+.account-box,
+.pw-find-form,
+.add-place-form {
   width: 50%;
   height: auto;
   background-color: white;
@@ -506,7 +536,7 @@ nav li:hover > a {
 
 .survey-box {
   width: 75%;
-  height: 600px ;
+  height: 600px;
   overflow: scroll;
   background-color: white;
   color: black;
@@ -536,7 +566,7 @@ h1 {
 /* style for input labels across all pages*/
 
 label {
-	margin-top: 20px;
+  margin-top: 20px;
   text-align: left;
 }
 
@@ -558,8 +588,12 @@ textarea,
 }
 
 /* style for submit buttons of forms */
-.login-button, .account button, .reset-pw, .add-place button, .question button[type="submit"] {
-	color: white;
+.login-button,
+.account button,
+.reset-pw,
+.add-place button,
+.question button[type="submit"] {
+  color: white;
   background: #4966bc;
   padding: 15px 20px;
   margin: 20px 0;
@@ -571,13 +605,19 @@ textarea,
 }
 
 /* style for hover action over the submit buttons */
-.login-button:hover, .create-account:hover, .reset-pw:hover, button[type="submit"]:hover {
-  background: rgb(108,218,231);
-  background: linear-gradient(0deg, rgba(108,218,231,1) 3%, rgba(129,226,188,1) 67%);
+.login-button:hover,
+.create-account:hover,
+.reset-pw:hover,
+button[type="submit"]:hover {
+  background: rgb(108, 218, 231);
+  background: linear-gradient(0deg, rgba(108, 218, 231, 1) 3%, rgba(129, 226, 188, 1) 67%);
 }
 
 /* style for pragraphs in certain pages' form */
-.login-box p, .add-place-form p, .pw-find-form p, .survey-box p {
+.login-box p,
+.add-place-form p,
+.pw-find-form p,
+.survey-box p {
   text-decoration: none;
   color: grey;
   font-size: 12px;
@@ -585,7 +625,8 @@ textarea,
 }
 
 /* style for inputs in create account page and find pw page */
-.account input, .find-pw input{
+.account input,
+.find-pw input {
   width: 100%;
   padding: 12px 20px;
   margin: 20px 0;
@@ -596,7 +637,7 @@ textarea,
 }
 
 /* style for photo input in add-place form */
-.add-place-form input[type="file"]{
+.add-place-form input[type="file"] {
   display: block;
   margin-top: 15px;
   margin-left: 10px;
@@ -609,7 +650,8 @@ textarea,
 
 /* style for saved bookmark icon on the saved places page */
 .saved-bookmark-container .fa-solid.fa-bookmark {
-  color: #FFBF46;;
+  color: #FFBF46;
+  ;
   bottom: 0;
   right: 0px;
   position: absolute;
@@ -624,8 +666,10 @@ textarea,
 
 /* responsive screeen style for mobile */
 @media(max-width: 589px) {
+
   /* hiding other navbar stuff thats not logo or burger */
-  .navbar .links, .profileContainer {
+  .navbar .links,
+  .profileContainer {
     display: none;
   }
 
@@ -641,7 +685,8 @@ textarea,
 
   /* giving dropdown-menu height so its actually displayed when navbar or menu itself is hovered,
   this is temporary for mock up bc no javascript */
-  .navbar:hover + .dropdown-menu, .dropdown-menu:hover {
+  .navbar:hover+.dropdown-menu,
+  .dropdown-menu:hover {
     height: 240px;
   }
 
@@ -655,7 +700,10 @@ textarea,
     background-image: url("https://w0.peakpx.com/wallpaper/484/491/HD-wallpaper-seattle-skyline-city-night-seattle-skyline.jpg");
   }
 
-  .login-box, .account-box, .pw-find-form, .add-place-form {
+  .login-box,
+  .account-box,
+  .pw-find-form,
+  .add-place-form {
     width: 60%;
   }
 
@@ -663,529 +711,564 @@ textarea,
     display: none;
   }
 
-  .account-box, .loginbox, .pw-find-form{
+  .account-box,
+  .loginbox,
+  .pw-find-form {
     width: 50%;
   }
 }
 
 /* Styling the body of the result pages, including result list and result selection */
 .body-styling {
-    font-family: sans-serif;
-    margin: 0;
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-  }
+  font-family: sans-serif;
+  margin: 0;
+  height: inherit;
+}
 
-  /* divs inside main are flexboxes */
-  .page-content {
-    display: flex;
-    height: 100%;
-  }
+/* divs inside main are flexboxes */
+.page-content {
+  display: flex;
+  height: 100%;
+}
 
-  /* Giving the containers flex 1 */
-  .flex-1 {
-    flex: 1;
-  }
+/* Giving the containers flex 1 */
+.flex-1 {
+  flex: 1;
+}
 
-  /* Setting overall font-size and height for html file */
+.full-height {
+  height: 100vh;
+}
+
+/* Setting overall font-size and height for html file */
+html {
+  font-size: 18px;
+}
+
+/* overall behavior of the result selection page (on larger screens its the right panel) */
+.result-selection {
+  flex: 1;
+  background-color: rgba(241, 241, 241, 0.519);
+  overflow: scroll;
+  height: 100vh;
+}
+
+/* overall behavior of the result list page (on larger screens its the left panel) */
+.result-list {
+  flex-basis: 500px;
+  box-shadow: 5px 0px 10px rgba(120, 120, 120, 0.197);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: scroll;
+  height: 100vh;
+}
+
+/* adding padding to both panels */
+.result-list,
+.result-selection {
+  padding: 1em;
+}
+
+
+/* flexbox container for the result cards */
+.result-cards-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* making each card a flexbox */
+.result-card {
+  display: flex;
+  align-items: center;
+}
+
+/* adjusting font size for result card's heading */
+.result-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+/* styling the result card's image */
+.result-imgs {
+  width: 7.5rem;
+  height: 7.5rem;
+  margin: 0 20px;
+  border-radius: 5px;
+  box-shadow: 6px 6px #4966bc;
+}
+
+/* styling the result card's description */
+.result-desc {
+  padding-right: 15px;
+  font-size: .9rem;
+}
+
+/* styling the result card's stars (aka rating) */
+.rating,
+.result-rating {
+  color: #FFBF46;
+  font-size: .9rem;
+}
+
+/* styling the result card's body which contains the title/heading, rating/stars, and description */
+.result-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* making the tags container a flexbox */
+.result-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* styling the result card's tags */
+.result-tags-items {
+  padding: 5px 10px;
+  background-color: #456ad7;
+  margin: 0px 3px;
+  color: white;
+  border-radius: 5px;
+  font-size: .7em;
+  margin-bottom: 10px;
+}
+
+/* give each card a box shadow on hover */
+.result-card:hover {
+  box-shadow: 0px 0px 10px rgba(120, 120, 120, 0.319);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* styling the result selection's title */
+.result-selection h1 {
+  overflow: hidden;
+  text-align: center;
+  font-size: 2rem;
+  background-image: linear-gradient(#cecece79 0 0);
+  background-position: bottom center;
+  background-size: 80% 2px;
+  background-repeat: no-repeat;
+  padding-bottom: 5px;
+}
+
+/* styling the result selection's image */
+.result-selection-img {
+  width: 16.5em;
+  height: 16.5em;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(120, 120, 120, 0.532);
+}
+
+/* styling the result selection's image */
+.result-selection-img-container {
+  position: relative;
+  margin: 0px 10px;
+}
+
+/* styling the buttons on result selection page */
+.res-sel-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px 8px 15px;
+  background-color: #4966bc;
+  color: white;
+  margin-right: 3px;
+  font-size: .6rem;
+  cursor: pointer;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* styling the buttons on result selection page when hovered to darken in color */
+.res-sel-btn:hover {
+  background-color: #3f59a4;
+  transition: all 0.6s ease;
+}
+
+/* styling the "see photos" button specifically to look a bit more transparent than others */
+.result-selection-img-container>a>.res-sel-btn {
+  position: absolute;
+  background-color: #4966bcb3;
+  bottom: 10px;
+  left: 10px;
+}
+
+/* styling the "see photos" button specifically to darken to a diff color on hover */
+.result-selection-img-container>a>.res-sel-btn:hover {
+  background-color: #4966bc;
+}
+
+/* giving buttons a transparent look with only a border */
+.clear-btn {
+  border: solid;
+  border-width: 2px;
+  background-color: transparent;
+  border-color: #4966bc;
+  color: #4966bc;
+}
+
+/* on hover of clear buttons, darken background */
+.clear-btn:hover {
+  background-color: #4966bc32;
+}
+
+/* making the image and ratings container a flexbox */
+.res-sel-img-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* styling the star rating to be inside of image */
+.result-selection-img-container>.result-rating {
+  position: absolute;
+  bottom: 10px;
+  left: 55%;
+  background-color: rgba(167, 167, 167, 0.405);
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 1em;
+}
+
+/* making divs inside result-selection a flexbox */
+.result-selection>div {
+  display: flex;
+}
+
+/* styling the description */
+.res-sel-desc {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+/* making the description and bookmark container a flexbox */
+.desc-bookmark-container {
+  display: flex;
+}
+
+/* styling the bookmark icon */
+.fa-regular.fa-bookmark {
+  font-size: 1.8rem;
+  margin: 4px;
+  color: #FFBF46;
+  -webkit-text-stroke: 1px white;
+}
+
+/* adjusting the selection's information (description, and buttons) to where they need to be */
+.res-sel-info {
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* flex-basis for the review panel */
+.reviews {
+  flex-basis: 650px;
+}
+
+/* adjusting font size for review paragraph */
+.review-body p {
+  font-size: .9rem;
+}
+
+/* flex-basis for the hours panel */
+.hours {
+  flex: 0 1 10rem;
+}
+
+/* removing bulletpoints and margins and padding from hour's list */
+.hours ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: .9rem;
+}
+
+/* adjusting font-size for hours heading */
+.hours h2 {
+  font-size: 1rem;
+}
+
+/* flexbox for nav-back to adjust children into place */
+.nav-back {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+}
+
+/* making sure the anchor tag remains black */
+.nav-back:visited,
+.nav-back:active,
+.black-links,
+.black-links:visited {
+  color: black;
+}
+
+/* styling back arrow */
+.fa-chevron-left {
+  margin-right: 10px;
+}
+
+/* styling review profile images */
+.profile-img {
+  border-radius: 50%;
+  height: 6.5rem;
+  margin-right: 10px;
+}
+
+/* making profile card header a flexbox */
+.card-header {
+  display: flex;
+}
+
+/* adjusting margins for review's profile's name */
+.profile-name {
+  margin-bottom: 2px;
+}
+
+/* styling review's profile's time aka date posted */
+.card-header time {
+  font-size: .75rem;
+  color: rgb(108, 108, 108);
+}
+
+/* styling the review cards */
+.review-cards {
+  padding: 0px 15px;
+}
+
+/* styling the images that are added for each review */
+.review-imgs>img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 5px;
+}
+
+/* styling photo page's title/heading */
+.title {
+  display: flex;
+  align-items: center;
+  padding: 5px 50px;
+  box-shadow: 0px 5px 10px rgba(120, 120, 120, 0.197);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* styling photo page's back arrow */
+.title .fa-chevron-left {
+  font-size: 40px;
+}
+
+/* making the photo page's flex direction be column wise */
+main>.photo-page {
+  flex-direction: column;
+}
+
+/* styling the photo container to hold photos in a grid manner */
+.photos-container {
+  padding: 10px 70px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(241, 241, 241, 0.519);
+  flex: 1;
+  align-content: flex-start;
+}
+
+/* styling the images themselves */
+.photos-container img {
+  max-width: 250px;
+  max-height: 250px;
+  margin: 5px 5px;
+  border-radius: 5px;
+}
+
+/* for during smaller screens to make either result list or result selection panel the entire screen */
+.flex-auto {
+  flex: auto;
+}
+
+/* for during smaller screens to hide either result list or result selection panel */
+.hidden {
+  display: none;
+}
+
+/* making the reviews container a flexbox to position items */
+.review-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* adjusting textarea's border and sizing  */
+.review-container textarea {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(118, 118, 118);
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 600px;
+  height: 300px;
+}
+
+/* adjusting review box's heading  */
+.review-box h1 {
+  margin-bottom: 2px;
+  font-size: 22px;
+}
+
+/* making the form a flexbox to position items */
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* styling the buttons in the review box */
+.review .res-sel-btn {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+/* hiding the input file default button  */
+input[type="file"] {
+  display: none;
+}
+
+/* making the review buttons container a flexbox to position items  */
+.review-btns {
+  display: flex;
+}
+
+/* Sets a max width for the screen */
+@media screen and (max-width: 1200px) {
+
+  /* adjusting font size */
   html {
-    height: 100%;
-    font-size: 18px;
+    font-size: 16px;
   }
 
-  /* overall behavior of the result selection page (on larger screens its the right panel) */
-  .result-selection {
-    flex: 1;
-    background-color: rgba(241, 241, 241, 0.519);
-    overflow: scroll;
-    height: 100vh;
-  }
-
-  /* overall behavior of the result list page (on larger screens its the left panel) */
-  .result-list {
-    flex-basis: 500px;
-    box-shadow: 5px 0px 10px  rgba(120, 120, 120, 0.197);
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    overflow: scroll;
-    height: 100vh;
-  }
-
-  /* adding padding to both panels */
-  .result-list, .result-selection {
-    padding: 1em;
-  }
-
-
-  /* flexbox container for the result cards */
-  .result-cards-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* making each card a flexbox */
-  .result-card {
-    display: flex;
-    align-items: center;
-  }
-
-  /* adjusting font size for result card's heading */
-  .result-card h2 {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-  }
-
-  /* styling the result card's image */
-  .result-imgs {
-    width: 7.5rem;
-    height: 7.5rem;
-    margin: 0 20px;
-    border-radius: 5px;
-    box-shadow: 6px 6px #4966bc;
-  }
-
-  /* styling the result card's description */
-  .result-desc {
-    padding-right: 15px;
-    font-size: .9rem;
-  }
-
-  /* styling the result card's stars (aka rating) */
-  .rating, .result-rating {
-    color: #FFBF46;
-    font-size: .9rem;
-  }
-
-  /* styling the result card's body which contains the title/heading, rating/stars, and description */
-  .result-body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* making the tags container a flexbox */
-  .result-tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  /* styling the result card's tags */
-  .result-tags-items {
-    padding: 5px 10px;
-    background-color: #456ad7;
-    margin: 0px 3px;
-    color: white;
-    border-radius: 5px;
-    font-size: .7em;
-    margin-bottom: 10px;
-  }
-
-  /* give each card a box shadow on hover */
-  .result-card:hover {
-    box-shadow: 0px 0px 10px  rgba(120, 120, 120, 0.319);
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  /* styling the result selection's title */
-  .result-selection h1 {
-    overflow: hidden;
-    text-align: center;
-    font-size: 2rem;
-    background-image: linear-gradient(#cecece79 0 0);
-    background-position: bottom center;
-    background-size: 80% 2px;
-    background-repeat: no-repeat;
-    padding-bottom: 5px;
-  }
-
-  /* styling the result selection's image */
+  /* adjuting display img of result selection */
   .result-selection-img {
-    width: 16.5em;
-    height: 16.5em;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px  rgba(120, 120, 120, 0.532);
+    width: 10rem;
+    height: 10rem;
   }
 
-  /* styling the result selection's image */
-  .result-selection-img-container {
-    position: relative;
-    margin: 0px 10px;
-  }
-
-  /* styling the buttons on result selection page */
-  .res-sel-btn {
-    border: none;
-    border-radius: 5px;
-    padding: 8px 15px 8px 15px;
-    background-color: #4966bc;
-    color: white;
-    margin-right: 3px;
-    font-size: .6rem;
-    cursor: pointer;
-    margin-top: 2px;
-    margin-bottom: 2px;
-  }
-
-  /* styling the buttons on result selection page when hovered to darken in color */
-  .res-sel-btn:hover {
-    background-color: #3f59a4;
-    transition: all 0.6s ease;
-  }
-
-  /* styling the "see photos" button specifically to look a bit more transparent than others */
-  .result-selection-img-container > a > .res-sel-btn {
-    position: absolute;
-    background-color: #4966bcb3;
-    bottom: 10px;
-    left: 10px;
-  }
-
-  /* styling the "see photos" button specifically to darken to a diff color on hover */
-  .result-selection-img-container > a > .res-sel-btn:hover {
-    background-color: #4966bc;
-  }
-
-  /* giving buttons a transparent look with only a border */
-  .clear-btn {
-    border: solid;
-    border-width: 2px;
-    background-color: transparent;
-    border-color: #4966bc;
-    color: #4966bc;
-  }
-
-  /* on hover of clear buttons, darken background */
-  .clear-btn:hover {
-    background-color: #4966bc32;
-  }
-
-  /* making the image and ratings container a flexbox */
-  .res-sel-img-rating {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* styling the star rating to be inside of image */
-  .result-selection-img-container > .result-rating {
-    position: absolute;
-    bottom: 10px;
+  /* adjusting star rating size in result selection page */
+  .result-selection-img-container>.result-rating {
     left: 55%;
-    background-color: rgba(167, 167, 167, 0.405);
-    border-radius: 5px;
-    padding: 2px 5px;
-    font-size: 1em;
+    font-size: .55em;
   }
 
-  /* making divs inside result-selection a flexbox */
-  .result-selection > div {
-    display: flex;
-  }
-
-  /* styling the description */
-  .res-sel-desc {
-    font-size: 1rem;
-    margin-top: 0;
-  }
-
-  /* making the description and bookmark container a flexbox */
-  .desc-bookmark-container {
-    display: flex;
-  }
-
-  /* styling the bookmark icon */
-  .fa-regular.fa-bookmark{
-    font-size: 1.8rem;
-    margin: 4px;
-    color: #FFBF46;
-    -webkit-text-stroke: 1px white;
-  }
-
-  /* adjusting the selection's information (description, and buttons) to where they need to be */
-  .res-sel-info {
-    margin-right: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  /* flex-basis for the review panel */
-  .reviews {
-    flex-basis: 650px;
-  }
-
-  /* adjusting font size for review paragraph */
-  .review-body p {
-    font-size: .9rem;
-  }
-
-  /* flex-basis for the hours panel */
-  .hours {
-    flex: 0 1 10rem;
-  }
-
-  /* removing bulletpoints and margins and padding from hour's list */
-  .hours ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    font-size: .9rem;
-  }
-
-  /* adjusting font-size for hours heading */
-  .hours h2 {
-    font-size: 1rem;
-  }
-
-  /* flexbox for nav-back to adjust children into place */
-  .nav-back {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    cursor: pointer;
-    color: black;
-  }
-
-  /* making sure the anchor tag remains black */
-  .nav-back:visited, .nav-back:active, .black-links, .black-links:visited {
-    color: black;
-  }
-
-  /* styling back arrow */
-  .fa-chevron-left {
-    margin-right: 10px;
-  }
-
-  /* styling review profile images */
-  .profile-img {
-    border-radius: 50%;
-    height: 6.5rem;
-    margin-right: 10px;
-  }
-
-  /* making profile card header a flexbox */
-  .card-header {
-    display: flex;
-  }
-
-  /* adjusting margins for review's profile's name */
-  .profile-name {
-    margin-bottom: 2px;
-  }
-
-  /* styling review's profile's time aka date posted */
-  .card-header time {
-    font-size: .75rem;
-    color: rgb(108, 108, 108);
-  }
-
-  /* styling the review cards */
-  .review-cards {
-    padding: 0px 15px;
-  }
-
-  /* styling the images that are added for each review */
-  .review-imgs > img {
-    width: 7rem;
-    height: 7rem;
-    border-radius: 5px;
-  }
-
-  /* styling photo page's title/heading */
-  .title {
-    display: flex;
-    align-items: center;
-    padding: 5px 50px;
-    box-shadow: 0px 5px 10px  rgba(120, 120, 120, 0.197);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-  }
-
-  /* styling photo page's back arrow */
-  .title .fa-chevron-left {
-    font-size: 40px;
-  }
-
-  /* making the photo page's flex direction be column wise */
-  main > .photo-page {
-    flex-direction: column;
-  }
-
-  /* styling the photo container to hold photos in a grid manner */
+  /* adjusting padding for photo container in photo page */
   .photos-container {
-    padding: 10px 70px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgba(241, 241, 241, 0.519);
-    flex: 1;
-    align-content: flex-start;
+    padding: 10px 60px;
   }
 
-  /* styling the images themselves */
+  /* adjusting img size for photos in photo page */
   .photos-container img {
-    max-width: 250px;
-    max-height: 250px;
-    margin: 5px 5px;
-    border-radius: 5px;
+    max-width: 180px;
+    max-height: 180px;
   }
 
-  /* for during smaller screens to make either result list or result selection panel the entire screen */
-  .flex-auto {
-    flex: auto;
+}
+
+/* Sets a max width for the screen */
+@media screen and (max-width: 900px) {
+
+  /* adjusting font size */
+  html {
+    font-size: 14px;
   }
 
-  /* for during smaller screens to hide either result list or result selection panel */
-  .hidden {
-    display: none;
+  /* adjusting img size for photos in photo page */
+  .photos-container img {
+    max-width: 200px;
+    max-height: 200px;
   }
 
-  /* making the reviews container a flexbox to position items */
-  .review-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* adjusting textarea's border and sizing  */
+  /* adjusting the textarea input box */
   .review-container textarea {
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(118, 118, 118);
-    border-radius: 5px;
-    margin-top: 10px;
-    width: 600px;
+    width: 500px;
     height: 300px;
   }
+}
 
-  /* adjusting review box's heading  */
-  .review-box h1 {
-    margin-bottom: 2px;
-    font-size: 22px;
-  }
+/* Sets a max width for the screen */
+@media screen and (max-width: 600px) {
 
-  /* making the form a flexbox to position items */
-  .review {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* styling the buttons in the review box */
-  .review .res-sel-btn {
-    margin-top: 10px;
+  /* adjusting font size */
+  html {
     font-size: 12px;
+    width: 100%;
   }
 
-  /* hiding the input file default button  */
-  input[type="file"] {
-    display: none;
+  /* adjuting display img of result selection */
+  .result-selection-img {
+    width: 12rem;
+    height: 12rem;
   }
 
-  /* making the review buttons container a flexbox to position items  */
-  .review-btns {
-    display: flex;
+  /* adjusting star rating size in result selection page */
+  .result-selection-img-container>.result-rating {
+    left: 55%;
+    font-size: .6em;
   }
 
-  /* Sets a max width for the screen */
-  @media screen and (max-width: 1200px){
-    /* adjusting font size */
-    html {
-      font-size: 16px;
-    }
-
-    /* adjuting display img of result selection */
-    .result-selection-img {
-      width: 10rem;
-      height: 10rem;
-    }
-
-    /* adjusting star rating size in result selection page */
-    .result-selection-img-container > .result-rating {
-      left: 55%;
-      font-size: .55em;
-    }
-
-    /* adjusting padding for photo container in photo page */
-    .photos-container {
-      padding: 10px 60px;
-    }
-
-    /* adjusting img size for photos in photo page */
-    .photos-container img {
-      max-width: 180px;
-      max-height: 180px;
-    }
-
+  /* adjusting basis for hours panel*/
+  .hours {
+    flex: 0 1 15rem;
   }
 
-  /* Sets a max width for the screen */
-  @media screen and (max-width: 900px){
-    /* adjusting font size */
-    html {
-      font-size: 14px;
-    }
-
-    /* adjusting img size for photos in photo page */
-    .photos-container img {
-      max-width: 200px;
-      max-height: 200px;
-    }
-
-    /* adjusting the textarea input box */
-    .review-container textarea {
-      width: 500px;
-      height: 300px;
-    }
+  /* adjusting button padding */
+  .res-sel-btn {
+    padding: 6px 10px;
   }
 
-  /* Sets a max width for the screen */
-  @media screen and (max-width: 600px){
-    /* adjusting font size */
-    html {
-      font-size: 12px;
-      width: 100%;
-    }
-
-    /* adjuting display img of result selection */
-    .result-selection-img {
-      width: 12rem;
-      height: 12rem;
-    }
-
-    /* adjusting star rating size in result selection page */
-    .result-selection-img-container > .result-rating {
-      left: 55%;
-      font-size: .6em;
-    }
-
-    /* adjusting basis for hours panel*/
-    .hours {
-      flex: 0 1 15rem;
-    }
-
-    /* adjusting button padding */
-    .res-sel-btn  {
-      padding: 6px 10px;
-    }
-
-    /* adjusting padding for photo container in photo page */
-    .photos-container {
-      padding: 10px 30px;
-    }
-
-    /* adjusting img size for photos in photo page */
-    .photos-container img {
-      max-width: 140px;
-      max-height: 140px;
-    }
-
-    /* adjusting the textarea input box */
-    .review-container textarea {
-      width: 400px;
-      height: 300px;
-    }
+  /* adjusting padding for photo container in photo page */
+  .photos-container {
+    padding: 10px 30px;
   }
+
+  /* adjusting img size for photos in photo page */
+  .photos-container img {
+    max-width: 140px;
+    max-height: 140px;
+  }
+
+  /* adjusting the textarea input box */
+  .review-container textarea {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+/* Sets a max width for the screen */
+@media screen and (max-width: 460px) {
+
+  /* adjusting the textarea input box */
+  .review-container textarea {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+/* Sets a max width for the screen */
+@media screen and (max-width: 350px) {
+
+  /* adjusting the textarea input box */
+  .review-container textarea {
+    width: 220px;
+    height: 120px;
+  }
+
+  .review {
+    align-items: center;
+  }
+}
 
 /* style survey questions form */
 .survey-question {
