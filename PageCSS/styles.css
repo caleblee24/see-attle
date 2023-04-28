@@ -453,6 +453,19 @@ nav li:hover > a {
   background-color: rgb(224, 199, 183)
 }
 
+.filterButton {
+  background-color: #4966bc;
+  color: white;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+.filterButton:hover {
+  background-color: #3451a6;
+}
 
 /* Login page css -Kaecy */
 
