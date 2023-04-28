@@ -13,12 +13,17 @@
   <title>Photos</title>
 </head>
 <body class="body-styling">
-  <header class="headerStyle">
-    <div class="container header">
-      <img class="downsizeLogo" src="../PageIMGS/See-attleIcon.svg" alt="seattle icon">
-      <a href="../index.html" class="black-links"><p class="underline">Home</p></a>
-      <a href="addLocation.html" class="black-links"><p class="underline">Add a Location</p></a>
-      <a href="savedPlaces.html" class="black-links"><p class="underline">Saved Locations</p></a>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="../index.html">
+          <img class="downsizeLogo" src="../PageIMGS/See-attleIcon.svg" alt="seattle icon"></a>
+      </div>
+      <ul class="links">
+        <li><a href="../index.html" class="black-links"><p class="underline">Home</p></a></li>
+        <li><a href="addLocation.html" class="black-links"><p class="underline">Add a Location</p></a></li>
+        <li><a href="savedPlaces.html" class="black-links"><p class="underline">Saved Locations</p></a></li>
+      </ul>
       <div class="profileContainer revealDropDown">
         <img class="profileImg" src="../PageIMGS/PuppyProfile.jpg" alt="cute puppy">
         <nav>
@@ -28,6 +33,17 @@
           </ul>
         </nav>
       </div>
+      <div class="toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdown-menu">
+      <li><a href="../index.html" class="black-links">Home</a></li>
+      <li><a href="addLocation.html" class="black-links">Add a Location</a></li>
+      <li><a href="savedPlaces.html" class="black-links">Saved Locations</a></li>
+      <li><a class="topElement" class="black-links" href="login.html">Sign In</a></li>
+      <li><a class="bottomElement" class="black-links" href="#">Sign Out</a></li>
     </div>
   </header>
 
