@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Seattle Meowtropolitan",
+    "address": "1225 N 45th St, Seattle, WA 98103",
+    "coverImg":
+      {
+        "img": "./imgs/seattle-meowtropolitan.jpg",
+        "alt": "Cup of latte with cat latte foam art."
+      },
+    "desc": "Come stop by Seattle Meowtropolitan to play with cats while sipping on some coffee andsnacking on some pastries. Reservations are recommended but walk-ins are welcomed.",
+    "hours": {
+      "Mon": "12-6PM",
+      "Tues": "12-5PM",
+      "Weds": "12-6PM",
+      "Thurs": "12-6PM",
+      "Fri": "12-9PM",
+      "Sat": "12-9PM",
+      "Sun": "12-6PM"
+    },
+    "tags": ["Cafe", "Kitties"],
+    "googleLink": "https://www.google.com/maps/dir//Seattle+Meowtropolitan,+1225+N+45th+St,+Seattle,+WA+98103/@47.6612247,-122.3451245,17z/data=!4m17!1m7!3m6!1s0x549014515d4d55af:0x286b9079c052c5c7!2sSeattle+Meowtropolitan!8m2!3d47.6612247!4d-122.3429358!16s%2Fg%2F11ckvlgmzd!4m8!1m0!1m5!1m1!1s0x549014515d4d55af:0x286b9079c052c5c7!2m2!1d-122.3429396!2d47.6612801!3e3"
+  },
+  {
+    "id": 2,
+    "name": "Twice Sold Tales",
+    "address": "1833 Harvard Ave. Seattle, WA 98122",
+    "coverImg":
+      {
+        "img": "./imgs/twice-sold-tales.jpg",
+        "alt": "Cat laying down next to a bookshelf inside of Twice Sold Tales, a second-hand bookstore."
+      },
+    "desc": "Search through the numerous second-hand books at this bookstore. Maybe while you're searching for your next read, you'll run into one of the live-in kitties!",
+    "hours": {
+      "Mon": "11AM-8PM",
+      "Tues": "11AM-8PM",
+      "Weds": "11AM-8PM",
+      "Thurs": "11AM-8PMM",
+      "Fri": "11AM-8PM",
+      "Sat": "11AM-8PM",
+      "Sun": "11AM-8PM"
+    },
+    "tags": ["Bookstore", "Kitties", "Thrifting"],
+    "googleLink": "https://www.google.com/maps/dir//Twice+Sold+Tales,+1833+Harvard+Ave,+Seattle,+WA+98122/@47.6503118,-122.4259256,11z/data=!4m18!1m8!3m7!1s0x549015328305d5db:0xa72a479cc0809acf!2sTwice+Sold+Tales!8m2!3d47.6186021!4d-122.3223751!15sChZ0d2ljZSBzb2xkIHRhbGVzIGhvdXJzIgQYAXABWhIiEHR3aWNlIHNvbGQgdGFsZXOSAQ91c2VkX2Jvb2tfc3RvcmXgAQA!16s%2Fg%2F1tdd0cmk!4m8!1m0!1m5!1m1!1s0x549015328305d5db:0xa72a479cc0809acf!2m2!1d-122.3223516!2d47.618602!3e3"
+  }
+]

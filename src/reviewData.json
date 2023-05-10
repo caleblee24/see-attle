@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "placeId": 1,
+    "userId": 1,
+    "date": "2023-03-07",
+    "rating": "5",
+    "desc": "I came with my friend and we had made a reservation before hand. We arrived about 10 minutes early and decided to get some coffee. I got a 12oz latte and was very surprised at the cute cat latte art the barista had made! My friend got an americano, so no latte art for him. About 5 minutes before our reservation, one of the staff came out and gave us a rundown on some rules to make sure we can enjoy our time with the cats to the fullest. The cats were adorable and really liked my friend, he had 3 of them playing with him at one point. We would totally come by again!",
+    "imgs": ["./imgs/seattle-meowtropolitan.jpg", "./imgs/seattle-meow-latte-heart.jpg", "./imgs/seattle-meow-earrings.jpg"]
+  }
+]
