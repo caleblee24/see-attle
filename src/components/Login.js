@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import userData from '../userData.json';
 
+
+
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -25,6 +27,10 @@ function LoginPage() {
     } else {
       setError('Invalid Email');
     }
+  };
+
+  const containerStyle = {
+    backgroundImage: 'url("https://upload.wikimedia.org/wikipedia/commons/5/58/Seattle_Center_as_night_falls.jpg")',
   };
 
   return (

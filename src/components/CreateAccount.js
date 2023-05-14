@@ -2,11 +2,6 @@ import React from 'react';
 
 
 function CreateAccountPage() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your account creation logic here
-  };
-
   return (
     <div className="login-body">
       <header className="headerStyle">
@@ -17,7 +12,7 @@ function CreateAccountPage() {
       <div className="account-container">
         <div className="account-box">
           <h1>Create Account</h1>
-          <form className="account" onSubmit={handleSubmit}>
+          <form className="account">
             <label htmlFor="username">Username:</label>
             <input type="text" id="username" name="username" required placeholder="Enter Username" />
             <label htmlFor="email">Email:</label>
