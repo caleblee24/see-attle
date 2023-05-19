@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
   <link rel="icon" type="image/png" href="../PageIMGS//space-needle72.png" />
   <title>Write Review</title>
 </head>
+
 <body class="body-styling">
   <header>
     <div class="navbar">
@@ -20,9 +22,15 @@
           <img class="downsizeLogo" src="../PageIMGS/See-attleIcon.svg" alt="seattle icon"></a>
       </div>
       <ul class="links">
-        <li><a href="../index.html" class="black-links"><p class="underline">Home</p></a></li>
-        <li><a href="addLocation.html" class="black-links"><p class="underline">Add a Location</p></a></li>
-        <li><a href="savedPlaces.html" class="black-links"><p class="underline">Saved Locations</p></a></li>
+        <li><a href="../index.html" class="black-links">
+            <p class="underline">Home</p>
+          </a></li>
+        <li><a href="addLocation.html" class="black-links">
+            <p class="underline">Add a Location</p>
+          </a></li>
+        <li><a href="savedPlaces.html" class="black-links">
+            <p class="underline">Saved Locations</p>
+          </a></li>
       </ul>
       <div class="profileContainer revealDropDown">
         <img class="profileImg" src="../PageIMGS/PuppyProfile.jpg" alt="cute puppy">
@@ -61,7 +69,7 @@
               <i class="fa-regular fa-star"></i>
               <i class="fa-regular fa-star"></i>
             </div>
-            <textarea id="review" name="review" placeholder="Leave a review..." araia-label="Input review text" required></textarea>
+            <textarea id="review" name="review" placeholder="Leave a review..." aria-label="Input review text" required></textarea>
             <div class="review-btns">
               <label class="res-sel-btn clear-btn"><input type="file" accept="image/png, image/jpeg"/>Upload photos</label>
               <button class="res-sel-btn" type="submit" role="button">Submit Review</button>
@@ -82,5 +90,8 @@
       </div>
     </footer>
   </div>
+
+  <script src="../PageJS/review.js"></script>
 </body>
+
 </html>
