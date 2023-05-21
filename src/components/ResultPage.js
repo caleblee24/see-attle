@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 export function ResultPage(props) {
-  const data = props.data;
+  const data = props.data; // data should be the filtered list of places that matches whatever filter condition
+  // user entered on home page
 
   // the anchor tag that leads back to index.html is a wip bc not sure if that's how we should
   // be linking pages and index.html isnt the valid link anymore
@@ -14,7 +15,7 @@ export function ResultPage(props) {
         <section className="result-list flex-auto">
 
           <h1>Results</h1>
-          <a className="nav-back" href="../index.html">
+          <a className="nav-back" href="">
             <FontAwesomeIcon icon={faChevronLeft} />
             <p>Back to filter</p>
           </a>

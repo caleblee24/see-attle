@@ -8,7 +8,7 @@ export function ResultList(props) {
   return (
     <div className="result-cards-container">
       {data.map(place => {
-      return <ResultCard place={place} />
+      return <ResultCard key={place.id} place={place} />
     })}
     </div>
   )
