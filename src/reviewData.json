@@ -6,6 +6,35 @@
     "date": "2023-03-07",
     "rating": "5",
     "desc": "I came with my friend and we had made a reservation before hand. We arrived about 10 minutes early and decided to get some coffee. I got a 12oz latte and was very surprised at the cute cat latte art the barista had made! My friend got an americano, so no latte art for him. About 5 minutes before our reservation, one of the staff came out and gave us a rundown on some rules to make sure we can enjoy our time with the cats to the fullest. The cats were adorable and really liked my friend, he had 3 of them playing with him at one point. We would totally come by again!",
-    "imgs": ["./imgs/seattle-meowtropolitan.jpg", "./imgs/seattle-meow-latte-heart.jpg", "./imgs/seattle-meow-earrings.jpg"]
+    "imgs":
+    [
+      {
+        "img": "/imgs/seattle-meowtropolitan.jpg",
+        "alt": "Cup of latte with cat latte foam art."
+      },
+      {
+        "img": "/imgs/seattle-meow-latte-heart.jpg",
+        "alt": "Cup of latte with latte foam art of a cat's head in shape of a heart."
+      },
+      {
+        "img": "/imgs/seattle-meow-earrings.jpg",
+        "alt": "Cat themed earrings for sale hanging off a jewelry display."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "placeId": 1,
+    "userId": 2,
+    "date": "2023-03-07",
+    "rating": "5",
+    "desc": "Super cute cats. I thought I was going to get bored midway but time passed by faster than I thought it would.",
+    "imgs":
+    [
+      {
+        "img": "/imgs/seattle-meow-cat.jpg",
+        "alt": "Cat laying on a rug."
+      }
+    ]
   }
 ]

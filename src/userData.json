@@ -4,13 +4,21 @@
     "username": "wontonly",
     "displayName": "Thanh Ly",
     "email":"thanhl@gmail.com",
-    "password":"thanh123"
+    "password":"thanh123",
+    "pfp": {
+      "img": "/imgs/thanh-pfp.jpg",
+      "alt": "Plush bear."
+    }
   },
   {
     "id": 2,
     "username": "nalouie",
     "displayName": "Nathan Louie",
     "email": "nathanl@gmail.com",
-    "password":"nathan123"
+    "password":"nathan123",
+    "pfp": {
+      "img": "/imgs/nathan-pfp.jpg",
+      "alt": "Plush bear."
+    }
   }
 ]
