@@ -10,6 +10,7 @@ import { ReviewList } from "./ReviewList";
 import { SelectedPage } from "./SelectedPage";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { ResultList } from "./ResultList";
+import { Home } from "./Home";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/CHANGELATER" element={""} /> {/* CHANGE ELEMENT TO HOME PAGE WHEN IT IS CREATED */}
-        <Route path="/" element={<ResultPage data={placeData} />} /> {/* placeData is a
+        <Route path="/" element={<Home></Home>} /> {/* placeData is a
         placeholder for now, once filtering is set up, the filtered data should be passed up to app
         and passed in here */}
         <Route path="/result/:placeId" element={<SelectedPage />}/>

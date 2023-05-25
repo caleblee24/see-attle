@@ -362,14 +362,13 @@ a {
 
 /* Fades the popup onto the screen */
 .popup {
-  margin: 70px auto;
+  margin: 10vh auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
   width: 80%;
-  height: 75%;
+  height: 80%;
   position: relative;
-  transition: all 5s ease-in-out;
 }
 
 /* Specifies the heading font for the popup */
@@ -398,8 +397,8 @@ a {
 
 /* Sets a max height for the content in the popup and otherwise it overflows */
 .popup .content {
-  max-height: 30%;
-  overflow: auto;
+  max-height: 70%;
+  margin-left: 10px;
 }
 
 /* Sets a max width for the screen */
@@ -488,6 +487,371 @@ nav li:hover>a {
   background-color: #3451a6;
 }
 
+.filterBoxesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  border-left: solid;
+  /* border-image: linear-gradient(180deg, rgba(0,97,255,1) 0%, rgba(96,239,255,1) 50%, rgba(0,97,255,1) 100%) 1; */
+  border-image: linear-gradient(180deg, rgba(0,97,255,1) 0%, rgba(96,239,255,1) 35%, rgba(86,225,255,1) 65%, rgba(0,97,255,1) 100%) 1;
+  /* border-image: linear-gradient(180deg, rgba(0,97,255,1) 0%, rgba(96,239,255,1) 25%, rgba(86,225,255,1) 75%, rgba(0,97,255,1) 100%) 1; */
+  /* border-image: linear-gradient(180deg, rgba(0,97,255,1) 10%, rgba(96,239,255,1) 25%, rgba(86,225,255,1) 75%, rgba(0,97,255,1) 90%) 1; */
+  border-width: thick;
+}
+
+/* This code below is from an outside source */
+.control {
+  font-family: arial;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+  border: 0px solid #000000;
+  border-radius: 0px;
+}
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+  background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+  background: #2e8296;
+}
+.control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+.control-checkbox .control_indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+  border-color: #7b7b7b;
+}
+.control-checkbox .control_indicator::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  background: #2aa1c0;
+  border-radius: 3rem;
+  opacity: 0.6;
+  z-index: 99999;
+  transform: scale(0);
+}
+
+.control-flex {
+  display: flex;
+  width: 35vw;
+}
+/* This code below is from an outside source */
+
+/* This code below is from an outside source */
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border-radius: 15px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgb(91, 226, 240); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 15px;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+/* This code below is from an outside source */
+.slideCon {
+  position: relative;
+  width: 1em;
+  box-sizing: content-box;
+  border-width: 3em 1em 0;
+  border-style: solid;
+  border-color: blue;
+  border-radius: 10px;
+  margin-top: 0.4rem;
+  margin-left: 0rem;
+  text-align: center;
+}
+  
+.slideCon:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -4em;
+  left: 0em;
+  border-width: 0 0.5em 1em;
+  border-style: solid;
+  border-color: transparent transparent blue;
+}
+
+.slideCon > p {
+  position: absolute;
+  top: -3em;
+  left: -0.5em;
+  background: rgb(108,218,231);
+  background: radial-gradient(circle, rgba(108,218,231,1) 3%, rgba(129,226,188,1) 77%);
+}
+
+.slideCon2 {
+  position: relative;
+  box-sizing: content-box;
+  border-radius: 10px;
+  margin-top: 0.3rem;
+  margin-left: 0rem;
+  text-align: center;
+  /* background: rgb(108,218,231);
+  background: radial-gradient(circle, rgba(108,218,231,1) 3%, rgba(129,226,188,1) 77%); */
+  background: hsla(152, 100%, 50%, 1);
+  background: linear-gradient(315deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  width: 50px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-self: flex-start;
+}
+  
+.slideCon2:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -1em;
+  left: 1em;
+  border-width: 0 0.5em 1em;
+  border-style: solid;
+  border-color: transparent transparent hsla(186, 100%, 69%, 1);
+}
+
+.testtest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testtest:nth-child(3) {
+  align-items: center;
+}
+
+/* .pentagon2 {
+  position: relative;
+  width: 1em;
+  box-sizing: content-box;
+  border-width: 3em 1em 0;
+  border-style: solid;
+  border-color: blue;
+  border-radius: 10px;
+  margin-top: 0.4rem;
+  margin-left: 157px;
+  text-align: center;
+}
+  
+.pentagon2:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -4em;
+  left: 0em;
+  border-width: 0 0.5em 1em;
+  border-style: solid;
+  border-color: transparent transparent blue;
+}
+
+.pentagon2 > p {
+  position: absolute;
+  top: -3em;
+  left: -0.5em;
+}
+
+.pentagon3 {
+  position: relative;
+  width: 1em;
+  box-sizing: content-box;
+  border-width: 3em 1em 0;
+  border-style: solid;
+  border-color: blue;
+  border-radius: 10px;
+  margin-top: 0.4rem;
+  margin-left: 314px;
+  text-align: center;
+}
+  
+.pentagon3:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -4em;
+  left: 0em;
+  border-width: 0 0.5em 1em;
+  border-style: solid;
+  border-color: transparent transparent blue;
+}
+
+.pentagon3 > p {
+  position: absolute;
+  top: -3em;
+  left: -0.5em;
+}
+
+.pentagon4 {
+  position: relative;
+  width: 1em;
+  box-sizing: content-box;
+  border-width: 3em 1em 0;
+  border-style: solid;
+  border-color: blue;
+  border-radius: 10px;
+  margin-top: 0.4rem;
+  margin-left: 471px;
+  text-align: center;
+}
+  
+.pentagon4:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -4em;
+  left: 0em;
+  border-width: 0 0.5em 1em;
+  border-style: solid;
+  border-color: transparent transparent blue;
+}
+
+.pentagon4 > p {
+  position: absolute;
+  top: -3em;
+  left: -0.5em;
+} */
+
+.arrow-up::before {
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  
+  border-bottom: 20px solid black;
+}
+
+.arrow-up::after {
+  width: 300px;
+  margin-left: 10px;
+  border: 4px solid #00bfb6;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #00bfb6;
+  font-family: arial;
+  position: relative;
+}
+
+/* @keyframes s-ripple {
+  0% {
+      transform: scale(0);
+  }
+  20% {
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1);
+  }
+}
+@keyframes s-ripple-dup {
+ 0% {
+     transform: scale(0);
+  }
+ 30% {
+      transform: scale(1);
+  }
+  60% {
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1);
+  }
+}
+.control-checkbox input + .control_indicator::before {
+  animation: s-ripple 250ms ease-out;
+}
+.control-checkbox input:checked + .control_indicator::before {
+  animation-name: s-ripple-dup;
+} */
+/* This code above is from an outside source */
+
 /* Login page css -Kaecy */
 
 /* style for login page body */
@@ -559,7 +923,7 @@ h1 {
 /* style for input labels across all pages*/
 
 label {
-  margin-top: 20px;
+  margin-top: 5px;
   text-align: left;
 }
 
@@ -1297,8 +1661,9 @@ input[type="file"] {
 
 /* style the range bar of the survey question form */
 input[type="range"] {
-  width: 100%;
+  width: 80%;
   margin: 10px;
+  margin-top: 50px;
 }
 
 
