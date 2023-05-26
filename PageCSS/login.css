@@ -1,0 +1,170 @@
+/* style for login page body */
+.loginBody {
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/58/Seattle_Center_as_night_falls.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.addPlaceBody {
+  font-family: sans-serif;
+}
+
+/*style for main div content of login, create account, and pw change page. */
+.loginContainer, .accountContainer, .pwContainer, .addPlaceContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.loginbox, .accountBox, .pw-find-form, .addPlaceForm {
+  width: 35%;
+  height: auto;
+  background-color: white;
+  color: black;
+  padding: 30px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.headerStyle {
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header img {
+  width: 80px;
+  height: 80px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: left;
+  font-size: 28px;
+}
+
+label {
+	margin-top: 20px;
+  text-align: left;
+}
+
+.login input[type="text"],
+.login input[type="password"],
+.addPlace input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+
+.loginButton, .createAccount, .resetPw, .addPlace button{
+	color: white;
+  background: rgb(108,218,231);
+  background: linear-gradient(0deg, rgba(108,218,231,1) 3%, rgba(129,226,188,1) 67%);
+  padding: 15px 20px;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.loginButton:hover, .createAccount:hover, .resetPw:hover {
+  background: rgb(108,218,231);
+  background: linear-gradient(0deg, rgba(108,218,231,1) 3%, rgba(129,226,188,1) 67%);
+}
+
+.loginbox p, .addPlaceForm p{
+  text-decoration: none;
+  color: grey;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.account input, .findPW input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 20px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.accountContainer label, .pw-find-form label, .addPlace label{
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.pw-find-form p {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.uploadImg form {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.drop-box {
+  width: 100%;
+  height: 150px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.drop-box label.drag-and-drop {
+  font-size: 15px;
+  color: #aaa;
+}
+
+.drop-box input[type="file"] {
+  display: none;
+}
+
+.drop-box.dragover {
+  border-color: #00c0ff;
+}
+
+
+@media(max-width: 589px) {
+  .headerStyle {
+    display: none;
+  }
+
+
+  .loginBody {
+    background-image: url("https://w0.peakpx.com/wallpaper/484/491/HD-wallpaper-seattle-skyline-city-night-seattle-skyline.jpg");
+  }
+
+  .accountBox, .loginbox, .pw-find-form{
+    width: 50%;
+  }
+
+}
+
