@@ -1,14 +1,12 @@
 import React from 'react';
+import { LoginHeader } from './LoginHeader';
+import { Footer } from './Footer';
 
 
 function CreateAccountPage() {
   return (
     <div className="login-body">
-      <header className="headerStyle">
-        <div className="container header">
-          <img className="downsizeLogo" src="../PageIMGS/See-attleIcon.svg" alt="seattle icon" />
-        </div>
-      </header>
+      <LoginHeader />
       <div className="account-container">
         <div className="account-box">
           <h1>Create Account</h1>
@@ -25,15 +23,7 @@ function CreateAccountPage() {
           </form>
         </div>
       </div>
-
-      <footer className="footerStyle">
-        <div className="container footerDivStyle">
-          <p className="footerDivTextStyle underline">Contact Us</p>
-          <p className="footerDivTextStyle underline">Terms</p>
-          <p className="footerDivTextStyle underline">Privacy</p>
-          <p className="footerDivTextStyle">&#169; Info 340: Group-BB4</p>
-        </div>
-      </footer>
+      <Footer />s
     </div>
   );
 }

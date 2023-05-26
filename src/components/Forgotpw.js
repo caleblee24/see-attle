@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import userData from '../userData.json';
+import { LoginHeader } from './LoginHeader';
+import { Footer } from './Footer';
 
 function ForgotPwPage() {
   const [email, setEmail] = useState('');
@@ -36,11 +38,7 @@ function ForgotPwPage() {
 
   return (
     <div className="login-body">
-      <header className="headerStyle">
-        <div className="container header">
-          <img className="downsizeLogo" src="../PageIMGS/See-attleIcon.svg" alt="seattle icon" />
-        </div>
-      </header>
+      <LoginHeader />
       <div className="pw-container">
         <div className="pw-find-form">
           <h2>Find Password</h2>
@@ -68,14 +66,7 @@ function ForgotPwPage() {
           </form>
         </div>
       </div>
-      <footer className="footerStyle">
-        <div className="container footerDivStyle">
-          <p className="footerDivTextStyle underline">Contact Us</p>
-          <p className="footerDivTextStyle underline">Terms</p>
-          <p className="footerDivTextStyle underline">Privacy</p>
-          <p className="footerDivTextStyle">&#169; Info 340: Group-BB4</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

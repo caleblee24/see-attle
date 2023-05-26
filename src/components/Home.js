@@ -6,7 +6,7 @@ import { HomeButtons } from "./HomeButtons";
 
 export function Home() {
     return (
-        
+
         <div>
             <Navbar></Navbar>
             <HomeButtons></HomeButtons>
