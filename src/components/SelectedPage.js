@@ -5,7 +5,7 @@ import { Hours } from "./Hours";
 import placeData from "../placeData.json";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 
 export function SelectedPage(props) {
   const navigate = useNavigate();
@@ -13,16 +13,15 @@ export function SelectedPage(props) {
 
   const place = placeData.find(data => {
     return data.id === parseInt(placeId)});
-  console.log(place);
 
   return (
     <main className="flex-1 full-height">
       <div className="page-content">
         <section className="result-selection flex-auto">
-          <a className="nav-back" onClick={() => navigate(`/`)}>
+          <Link className="nav-back" to="/result">
             <FontAwesomeIcon icon={faChevronLeft} />
             <p>Back to results</p>
-          </a>
+          </Link>
 
           <ResultHeader place={place} />
           <div>
