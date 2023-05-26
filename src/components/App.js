@@ -11,6 +11,8 @@ import { SelectedPage } from "./SelectedPage";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { ResultList } from "./ResultList";
 import { Home } from "./Home";
+import { SavedPlaces } from './SavedPlace'
+import { AddLocation } from './AddLocation'
 
 function App() {
   return (
@@ -32,3 +34,4 @@ function App() {
 }
 
 export default App;
+
