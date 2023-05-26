@@ -2,6 +2,7 @@ import React from "react";
 import { ResultList } from "./ResultList";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
 
 export function ResultPage(props) {
   const data = props.data; // data should be the filtered list of places that matches whatever filter condition
@@ -15,10 +16,10 @@ export function ResultPage(props) {
         <section className="result-list flex-auto">
 
           <h1>Results</h1>
-          <a className="nav-back" href="">
+          <Link className="nav-back" to="/home">
             <FontAwesomeIcon icon={faChevronLeft} />
             <p>Back to filter</p>
-          </a>
+          </Link>
 
           <ResultList data={data}/>
         </section>
