@@ -1,13 +1,31 @@
 import React, { useState } from "react";
 import CreateFilterBoxes from "./CreateFilterBoxes";
 import Slider from "./Slider";
+import placeData from "../placeData.json";
+import { useNavigate } from "react-router-dom";
 
-export function HomeButtons() {
+export function HomeButtons(props) {
     const [isClicked, setIsClicked] = useState(false);
+    const [sliderLabel, setSliderLabel] = useState('');
+    const navigate = useNavigate();
 
     const handleClick = (event) => {
         setIsClicked(!isClicked);
     };
+
+    const updateSliderLabel = (label) => {
+        setSliderLabel(label);
+    }
+
+    const filterSlider = () => {
+        console.log(sliderLabel);
+        const filtered = placeData.filter((place) => {
+            return place.price === sliderLabel;
+        });
+
+        props.updateFilteredData(filtered);
+        navigate(`/result`);
+    }
 
     return (
         <>
@@ -25,8 +43,8 @@ export function HomeButtons() {
                     <div className="content ">
                         <CreateFilterBoxes filterBoxes={['test', 'test2', 'test3', 'test4', 'test5', 'looooooooong' , 'test6', 'test7']}></CreateFilterBoxes>
                     </div>
-                    <Slider clicked={isClicked}></Slider>
-                    <a className="filterButton" href="PageHTML/resultListMS.html">Results</a>
+                    <Slider clicked={isClicked} updateSliderLabel={updateSliderLabel}></Slider>
+                    <a className="filterButton" onClick={filterSlider}>Results</a>
                 </div>
             </div>
             <div id="filterPopupTwo" className="overlay">
