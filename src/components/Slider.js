@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 export default function Slider(props) {
     const clicked = props.clicked;
+    const updateSliderLabel = props.updateSliderLabel;
     console.log(clicked)
 
     const [value, setValue] = useState(0);
@@ -15,6 +16,7 @@ export default function Slider(props) {
 
     const handleChange = (event) => {
         setValue(event.target.value);
+        updateSliderLabel(getLabelForValue(event.target.value));
     };
 
     const getLabelForValue = (value) => {
@@ -27,7 +29,7 @@ export default function Slider(props) {
 
     useEffect(() => {
         const slider = sliderRef.current;
-        
+
         const resizeObserver = new ResizeObserver(entries => {
             for (let entry of entries) {
                 const { width } = entry.contentRect;
@@ -60,11 +62,11 @@ export default function Slider(props) {
 
     return (<div className="slidecontainer">
         <div className="testtest" ref={elementRef2}>
-        <input type="range" min={dataList[0].value} 
-                                 max={dataList[dataList.length - 1].value} 
-                                 value={value} step={20} onChange={handleChange} 
-                                 ref={sliderRef} list="rangeValues" 
-                                 className="slider" 
+        <input type="range" min={dataList[0].value}
+                                 max={dataList[dataList.length - 1].value}
+                                 value={value} step={20} onChange={handleChange}
+                                 ref={sliderRef} list="rangeValues"
+                                 className="slider"
                                  id="myRange" />
         <dataList id="rangeValues">
             {dataList.map((item, index) => (

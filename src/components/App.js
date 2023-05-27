@@ -19,22 +19,27 @@ function App() {
     email: thanhl@gmail.com
     pass: thanh123 */
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [filteredData, setFilteredData] = useState({});
 
   const handleLogin = () => {
     setIsLoggedIn(true);
   };
 
+  const updateFilteredData = (data) => {
+    setFilteredData(data);
+  }
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="login" element={<LoginPage onLogin={handleLogin} />} />
-        <Route path="home" element={isLoggedIn ? <Home /> : <Navigate to="/login" />} />
+        <Route path="home" element={isLoggedIn ? <Home updateFilteredData={updateFilteredData} /> : <Navigate to="/login" />} />
         <Route path="createAccount" element={<CreateAccountPage />} />
         <Route path="forgotPw" element={<ForgotPwPage />} />
         <Route path="addLocation" element={isLoggedIn ? <AddLocation /> : <Navigate to="/login" />} />
         <Route path="savedPlaces" element={isLoggedIn ? <SavedPlaces /> : <Navigate to="/login" />} />
         <Route path="/" element={isLoggedIn ? <Navigate to="/home" /> : <Navigate to="/login" />} />
-        <Route path="result" element={<ResultPage data={placeData} />}></Route>
+        <Route path="result" element={<ResultPage data={filteredData} />}></Route>
         <Route path="result/:placeId" element={<SelectedPage />}></Route>
         <Route path="*" element={isLoggedIn ? <Navigate to="/home" /> : <Navigate to="/login" />}></Route>
       </Routes>

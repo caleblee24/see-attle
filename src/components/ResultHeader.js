@@ -6,7 +6,6 @@ import { getAvgRating } from "./ResultCard";
 
 export function ResultHeader(props) {
   const place = props.place; // place is a place object
-  console.log(place);
 
   return (
     <>
