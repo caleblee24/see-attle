@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 export function HomeButtons(props) {
     const [isClicked, setIsClicked] = useState(false);
-    const [sliderLabel, setSliderLabel] = useState('');
+    const [sliderLabel, setSliderLabel] = useState('Free');
     const navigate = useNavigate();
 
     const handleClick = (event) => {
