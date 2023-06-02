@@ -8,8 +8,6 @@ export function ResultPage(props) {
   const data = props.data; // data should be the filtered list of places that matches whatever filter condition
   // user entered on home page
 
-  // the anchor tag that leads back to index.html is a wip bc not sure if that's how we should
-  // be linking pages and index.html isnt the valid link anymore
   return (
     <main className="flex-1 full-height">
       <div className="page-content">
