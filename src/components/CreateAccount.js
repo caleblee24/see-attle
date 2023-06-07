@@ -48,7 +48,6 @@ function CreateAccountPage() {
       });
 
       setStatusMessage('Account created successfully!');
-      console.log('Updated userData:', updatedUserData); // Log the updated userData array
     } catch (error) {
       console.error('Error:', error);
       setStatusMessage('An error occurred while creating the account.');

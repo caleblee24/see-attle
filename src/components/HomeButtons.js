@@ -34,7 +34,6 @@ export function HomeButtons(props) {
     }
 
     const filterSlider = () => {
-        console.log(sliderLabel);
         const filtered = placeData.filter((place) => {
             return place.price === sliderLabel;
         });

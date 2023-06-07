@@ -2,7 +2,6 @@ import React from "react";
 
 export default function CreateFilterBoxes(props) {
     const filterBoxes = props.filterBoxes
-    console.log(filterBoxes);
 
     const filterBoxElements = filterBoxes.map(filter => {
         return  <div className="control-flex">
@@ -18,5 +17,5 @@ export default function CreateFilterBoxes(props) {
             {filterBoxElements}
         </div>
     )
-    
+
 }

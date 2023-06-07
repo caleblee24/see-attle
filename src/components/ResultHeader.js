@@ -40,7 +40,6 @@ export function ResultHeader(props) {
     const db = getDatabase();
     const userDataRef = ref(db, "userData/" + user.key + "/savedPlaces");
 
-    console.log(user);
     const saved = user.savedPlaces;
     let newSaved= undefined;
     if (!isSaved) { // add to list, set isnt synchronous so we gotta do opposite

@@ -112,9 +112,8 @@ function AddLocation() {
       body: JSON.stringify(updatedLocations)
     })
       .then(response => response.json())
-      .then(data => console.log('Location added successfully', data))
       .catch(error => console.error('Error:', error));
-      //console.log('Updated placeData:', updatedLocations);
+
   }
 };
 

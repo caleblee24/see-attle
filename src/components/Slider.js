@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 export default function Slider(props) {
     const clicked = props.clicked;
     const updateSliderLabel = props.updateSliderLabel;
-    console.log(clicked)
 
     const [value, setValue] = useState(0);
 

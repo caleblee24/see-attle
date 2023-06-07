@@ -9,7 +9,6 @@ function WriteReviewPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform review submission logic here
-    console.log('Review submitted:', { rating, review, photos });
   };
 
   const handleFileChange = (e) => {
