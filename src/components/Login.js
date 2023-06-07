@@ -16,8 +16,6 @@ function LoginPage({ onLogin }) {
       .then((res) =>
         { return res.json()})
       .then((data) => {
-        console.log(data);
-        console.log("here");
         setUserData(data);
       })
   }, []);
