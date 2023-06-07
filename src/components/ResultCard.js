@@ -30,24 +30,34 @@ export const getAvgRating = (placeId) => {
   const [reviewData, setReviewData] = useState(null);
 
   useEffect( () => {
-    fetch("./data/reviewData.json")
+    fetch("/data/reviewData.json")
       .then((res) => res.json())
       .then((data) => {
         setReviewData(data);
       })
   }, []);
 
-  const ratings = reviewData.filter( x => {
-    return x.placeId === placeId;
-  }).map(entry => {
-    return entry.rating;
-  });
-
+  let ratings = undefined;
   let total = 0;
 
-  ratings.forEach(rating => {
-    total += rating;
-  });
+  if (reviewData) {
+    reviewData.filter( x => {
+      return x.placeId === placeId;
+    }).map(entry => {
+      return entry.rating;
+    });
+
+    if (ratings) {
+      ratings.forEach(rating => {
+        total += rating;
+      });
+      return ratings.length === 0 ? 0 : total/ratings.length;
+    }
+  }
+
+  if (reviewData === null || ratings === undefined) {
+    return 0;
+  }
 
   return ratings.length === 0 ? 0 : total/ratings.length;
 }

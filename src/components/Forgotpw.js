@@ -9,7 +9,7 @@ function ForgotPwPage() {
   const [userData, setUserData] = useState(null);
 
   useEffect( () => {
-    fetch("./data/userData.json")
+    fetch("/data/userData.json")
       .then((res) => res.json())
       .then((data) => {
         setUserData(data);

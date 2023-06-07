@@ -6,39 +6,40 @@ import { useState, useEffect } from "react";
 
 export function Navbar() {
   const navigate = useNavigate();
-  const [userData, setUserData] = useState([]);
-  const [user, setUser] = useState({});
+  const [userData, setUserData] = useState(undefined);
 
-  // useEffect( async () => {
-  //   await fetch("./data/userData.json")
-  //     .then(async (res) =>
-  //       { return await res.json()})
-  //     .then((data) => {
-  //       setUserData(data);
-  //     })
-  // }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("/data/userData.json");
+      const json = await res.json();
 
-  // console.log(userData)
+      setUserData(json);
+    }
+
+    fetchData()
+      .catch(console.error);;
+  }, []);
 
   function logOut() {
     localStorage.clear();
     navigate('/login');
   }
 
-  // const userPfp = () => {
-  //   const user1 = userData.find((user) => {return user.username === localStorage.getItem('user')});
-  //   setUser(user1);
-  //   console.log(user1);
-  //   console.log(user);
-  // }
+  let user = undefined;
+  if (userData) {
+    const user1 = userData.find((user) => user.username === localStorage.getItem('user'));
+    user = user1;
+  }
 
-  // userPfp();
+  if (user === undefined) {
+    return <>Loading...</>;
+  }
 
   return (
-    <header>
+      <header>
       <div className="navbar">
         <div className="logo">
-          <Link to="/"><img className="downsizeLogo" src="imgs/See-attleIcon.svg" alt="seattle icon" /></Link>
+          <Link to="/"><img className="downsizeLogo" src="/imgs/See-attleIcon.svg" alt="seattle icon" /></Link>
         </div>
         <ul className="links">
           <li><Link to="/" className="black-links"><p className="underline">Home</p></Link></li>
@@ -46,7 +47,7 @@ export function Navbar() {
           <li><Link to="/savedPlaces" className="black-links"><p className="underline">Saved Locations</p></Link></li>
         </ul>
         <div className="profileContainer revealDropDown">
-          <img className="profileImg" src="imgs/PuppyProfile.jpg" alt="cute puppy" />
+          <img className="profileImg" src={user.pfp.img} alt="cute puppy" />
           <nav>
             <ul>
               <li onClick={logOut}><Link className="bottomElement black-links">Sign Out</Link></li>

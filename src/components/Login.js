@@ -12,7 +12,7 @@ function LoginPage({ onLogin }) {
   const navigate = useNavigate();
 
   useEffect( () => {
-    fetch("./data/userData.json")
+    fetch("/data/userData.json")
       .then((res) =>
         { return res.json()})
       .then((data) => {

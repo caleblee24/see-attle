@@ -10,7 +10,7 @@ export function HomeButtons(props) {
     const [placeData, setPlaceData] = useState(null);
 
     useEffect( () => {
-      fetch("./data/placeData.json")
+      fetch("/data/placeData.json")
         .then((res) => res.json())
         .then((data) => {
           setPlaceData(data);
