@@ -10,25 +10,11 @@ import {getDatabase, ref, set as firebaseSet, push as firebasePush, onValue,} fr
 
 export function ResultHeader(props) {
   const place = props.place; // place is a place object
-  const [placeData, setPlaceData] = useState(null);
+  // const [placeData, setPlaceData] = useState(null);
   const [userData, setUserData] = useState(null);
+  const [user, setUser] = useState(null);
   const username = localStorage.getItem('user');
-  const [isSaved, setIsSaved] = useState(setTimeout(function() { checkIfSaved(); }, 100));
-
-  useEffect(() => {
-    const db = getDatabase();
-    const placeDataRef = ref(db, "placeData");
-
-    onValue(placeDataRef, function(snapshot) {
-      const placeDataObj = snapshot.val();
-      const objKeys = Object.keys(placeDataObj);
-      const objArray = objKeys.map((keyString) => {
-        placeDataObj[keyString].key = keyString;
-        return placeDataObj[keyString];
-      });
-      setPlaceData(objArray);
-    });
-  }, []);
+  const [isSaved, setIsSaved] = useState(setTimeout(function() { checkIfSaved(); }, 3));
 
   useEffect(() => {
     const db = getDatabase();
@@ -39,6 +25,9 @@ export function ResultHeader(props) {
       const objKeys = Object.keys(userDataObj);
       const objArray = objKeys.map((keyString) => {
         userDataObj[keyString].key = keyString;
+        if (userDataObj[keyString].username === username) {
+          setUser(userDataObj[keyString]);
+        }
         return userDataObj[keyString];
       });
       setUserData(objArray);
@@ -48,22 +37,26 @@ export function ResultHeader(props) {
   function bookmarkClicked() {
     setIsSaved(!isSaved);
 
-    const user = userData.find(user => user.username === username);
+    const db = getDatabase();
+    const userDataRef = ref(db, "userData/" + user.key + "/savedPlaces");
+
+    console.log(user);
     const saved = user.savedPlaces;
     let newSaved= undefined;
     if (!isSaved) { // add to list, set isnt synchronous so we gotta do opposite
       newSaved = [...saved, place.id];
+      firebaseSet(userDataRef, newSaved)
     } else {
       newSaved = saved.filter(id => id !== place.id);
+      firebaseSet(userDataRef, newSaved)
     }
 
   }
 
   function checkIfSaved() {
-    if (userData) {
-      const user = userData.find(user => user.username === username);
+    if (user) {
       const saved = user.savedPlaces;
-      return saved.includes(place.id);
+      setIsSaved(saved.includes(place.id));
     }
   }
 
