@@ -1,2 +1,1 @@
-
-
+Out with friends, but you just don't know where to go next? Open the See-attle app! See-attle is a location recommendation app that aims to cure these moments where users just don't know what to do next and are unsure of the places they can visit around the city of Seattle. Sign up now, and through quick and easy filtering, the See-attle app will find you your next adventure!
