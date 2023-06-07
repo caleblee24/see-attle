@@ -1,7 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link, useNavigate } from "react-router-dom";
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 export function Navbar() {
+  const navigate = useNavigate();
+
+  function logOut() {
+    localStorage.clear();
+    console.log(localStorage.getItem('user'));
+    navigate('/login');
+  }
+
   return (
     <header>
       <div className="navbar">
@@ -17,13 +27,12 @@ export function Navbar() {
           <img className="profileImg" src="imgs/PuppyProfile.jpg" alt="cute puppy" />
           <nav>
             <ul>
-              <li><Link className="topElement black-links" to="/login">Sign In</Link></li>
-              <li><Link className="bottomElement black-links" to="#">Sign Out</Link></li>
+              <li><Link className="bottomElement black-links" onClick={logOut()}>Sign Out</Link></li>
             </ul>
           </nav>
         </div>
         <div className="toggle-btn">
-          <i className="fa-solid fa-bars"></i>
+          <FontAwesomeIcon className="fa-solid fa-bars" icon={faBars} />
         </div>
       </div>
 
@@ -31,8 +40,7 @@ export function Navbar() {
         <li><Link to="/home" className="black-links">Home</Link></li>
         <li><Link to="/addLocation" className="black-links"><p className="underline">Add a Location</p></Link></li>
         <li><Link to="/savedPlaces" className="black-links">Saved Locations</Link></li>
-        <li><Link className="topElement black-links" to="/login">Sign In</Link></li>
-        <li><Link className="bottomElement black-links" to="/login">Sign Out</Link></li>
+        <li><Link className="bottomElement black-links" onClick={logOut()}>Sign Out</Link></li>
       </div>
     </header>
   )

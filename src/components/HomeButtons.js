@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CreateFilterBoxes from "./CreateFilterBoxes";
 import Slider from "./Slider";
-// import placeData from "../placeData.json";
 import { useNavigate } from "react-router-dom";
 
 export function HomeButtons(props) {
