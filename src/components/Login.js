@@ -21,22 +21,9 @@ function LoginPage({ onLogin }) {
         setUserData(data);
       })
   }, []);
-  // const result = fetch("./data/userData.json")
-  //   .then((res) => {
-  //     const jsonresult = res.json();
-  //     return jsonresult;
-  //   })
-  //   .then((data) => {
-  //     console.log("here");
-  //     setUserData(data);
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //   })
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log(userData);
 
     // Perform login validation
     const user = userData.find((user) => user.email === email);
@@ -44,6 +31,7 @@ function LoginPage({ onLogin }) {
       if (password === user.password) {
         setError('');
         onLogin(true);
+        localStorage.setItem('user', user.username);
         navigate('/home');
       } else {
         setError('Incorrect Password');
