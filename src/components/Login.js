@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import userData from '../userData.json';
+import React, { useState, useEffect } from 'react';
+// import userData from '../userData.json';
 import { Footer } from './Footer';
 import { Link, useNavigate } from 'react-router-dom';
 import { LoginHeader } from './LoginHeader';
@@ -8,10 +8,35 @@ function LoginPage({ onLogin }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [userData, setUserData] = useState([]);
   const navigate = useNavigate();
+
+  useEffect( () => {
+    fetch("./data/userData.json")
+      .then((res) =>
+        { return res.json()})
+      .then((data) => {
+        console.log(data);
+        console.log("here");
+        setUserData(data);
+      })
+  }, []);
+  // const result = fetch("./data/userData.json")
+  //   .then((res) => {
+  //     const jsonresult = res.json();
+  //     return jsonresult;
+  //   })
+  //   .then((data) => {
+  //     console.log("here");
+  //     setUserData(data);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //   })
 
   const handleLogin = (e) => {
     e.preventDefault();
+    console.log(userData);
 
     // Perform login validation
     const user = userData.find((user) => user.email === email);

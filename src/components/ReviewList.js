@@ -1,9 +1,27 @@
 import React from "react";
-import reviewData from "../reviewData.json";
-import userData from "../userData.json";
 import { ReviewCard } from "./ReviewCard";
+import { useState, useEffect } from "react";
 
 export function ReviewList(props) {
+  const [reviewData, setReviewData] = useState(null);
+  const [userData, setUserData] = useState(null);
+
+  useEffect( () => {
+    fetch("./data/reviewData.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setReviewData(data);
+      })
+  }, []);
+
+  useEffect( () => {
+    fetch("./data/userData.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setUserData(data);
+      })
+  }, []);
+
   const place = props.place;
 
   const reviews = reviewData.filter((review) => {

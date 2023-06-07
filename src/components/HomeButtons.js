@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CreateFilterBoxes from "./CreateFilterBoxes";
 import Slider from "./Slider";
-import placeData from "../placeData.json";
+// import placeData from "../placeData.json";
 import { useNavigate } from "react-router-dom";
 
 export function HomeButtons(props) {
     const [isClicked, setIsClicked] = useState(false);
     const [sliderLabel, setSliderLabel] = useState('Free');
     const navigate = useNavigate();
+    const [placeData, setPlaceData] = useState(null);
+
+    useEffect( () => {
+      fetch("./data/placeData.json")
+        .then((res) => res.json())
+        .then((data) => {
+          setPlaceData(data);
+        })
+    }, []);
 
     const handleClick = (event) => {
         setIsClicked(!isClicked);

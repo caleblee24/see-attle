@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
-import placeData from "../placeData.json";
+
 import { ResultPage } from "./ResultPage";
 import { LoginPage } from "./Login";
 import { CreateAccountPage } from "./CreateAccount";
 import { ForgotPwPage } from "./Forgotpw";
-import { ReviewCard } from "./ReviewCard";
-import { ReviewList } from "./ReviewList";
 import { SelectedPage } from "./SelectedPage";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
-import { ResultList } from "./ResultList";
 import { Home } from "./Home";
 import { SavedPlaces } from './SavedPlace'
 import { AddLocation } from './AddLocation'

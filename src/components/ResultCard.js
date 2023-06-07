@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Stars } from "./stars";
-import reviewData from "../reviewData.json"
 import { useNavigate } from "react-router-dom";
 
 /* Creates one result card used to populate result list. Props.place takes in a single "place" object
@@ -28,6 +27,16 @@ export function ResultCard(props) {
 
 // getting average rating
 export const getAvgRating = (placeId) => {
+  const [reviewData, setReviewData] = useState(null);
+
+  useEffect( () => {
+    fetch("./data/reviewData.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setReviewData(data);
+      })
+  }, []);
+
   const ratings = reviewData.filter( x => {
     return x.placeId === placeId;
   }).map(entry => {
@@ -38,7 +47,7 @@ export const getAvgRating = (placeId) => {
 
   ratings.forEach(rating => {
     total += rating;
-  })
+  });
 
   return ratings.length === 0 ? 0 : total/ratings.length;
 }
