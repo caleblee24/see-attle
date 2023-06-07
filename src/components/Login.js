@@ -31,14 +31,19 @@ function LoginPage({ onLogin }) {
       });
       setUserData(objArray);
     });
+
   }, []);
 
   const handleLogin = (e) => {
     e.preventDefault();
 
     // Perform login validation
-    const user = userData.find((user) => user.email === email);
+    const user = userData.find(
+      (user) => user.email === email && user.password === password
+    );
+
     if (user) {
+
       if (password === user.password) {
         setError("");
         onLogin(true);
@@ -51,6 +56,7 @@ function LoginPage({ onLogin }) {
       setError("Invalid Email");
     }
   };
+
 
   return (
     <div className="login-body">
