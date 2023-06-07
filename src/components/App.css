@@ -642,7 +642,7 @@ nav li:hover>a {
   margin-left: 0rem;
   text-align: center;
 }
-  
+
 .slideCon:before {
   content: "";
   position: absolute;
@@ -680,7 +680,7 @@ nav li:hover>a {
   padding-bottom: 15px;
   align-self: flex-start;
 }
-  
+
 .slideCon2:before {
   content: "";
   position: absolute;
@@ -715,7 +715,7 @@ nav li:hover>a {
   margin-left: 157px;
   text-align: center;
 }
-  
+
 .pentagon2:before {
   content: "";
   position: absolute;
@@ -746,7 +746,7 @@ nav li:hover>a {
   margin-left: 314px;
   text-align: center;
 }
-  
+
 .pentagon3:before {
   content: "";
   position: absolute;
@@ -777,7 +777,7 @@ nav li:hover>a {
   margin-left: 471px;
   text-align: center;
 }
-  
+
 .pentagon4:before {
   content: "";
   position: absolute;
@@ -797,11 +797,11 @@ nav li:hover>a {
 } */
 
 .arrow-up::before {
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  
+
   border-bottom: 20px solid black;
 }
 
@@ -880,8 +880,18 @@ nav li:hover>a {
   height: 100vh;
 }
 
+.add-place-form {
+  width: 50%;
+  height: auto;
+  background-color: white;
+  color: black;
+  padding: 30px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
 /* basic styling for form boxes of pages */
-.login-box, .account-box, .pw-find-form, .add-place-form {
+.login-box, .account-box, .pw-find-form {
   width: 35%;
   height: auto;
   background-color: white;
@@ -933,6 +943,7 @@ input[type="password"],
 input[type="text"],
 textarea,
 input[type="email"],
+fieldset,
 select {
   width: 100%;
   padding: 12px 20px;
@@ -942,6 +953,7 @@ select {
   box-sizing: border-box;
   border-radius: 20px;
 }
+
 
 /* set margins for fieldset in feedback form */
 fieldset:first-of-type {
@@ -994,7 +1006,7 @@ button[type="submit"]:hover {
 }
 
 /* style for photo input in add-place form */
-.add-place-form input[type="file"] {
+.add-place-form input[type="file"]{
   display: block;
   margin-top: 15px;
   margin-left: 10px;
@@ -1063,6 +1075,7 @@ button[type="submit"]:hover {
   .add-place-form {
     width: 60%;
   }
+
 
   .add-place input::placeholder {
     display: none;
@@ -1678,4 +1691,24 @@ input[type="range"] {
 /* style the range bar text */
 .range-labels span {
   font-size: 16px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
