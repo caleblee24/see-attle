@@ -3,21 +3,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link, useNavigate } from "react-router-dom";
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from "react";
+import {getDatabase, ref, set as firebaseSet, push as firebasePush, onValue,} from "firebase/database";
 
 export function Navbar() {
   const navigate = useNavigate();
   const [userData, setUserData] = useState(undefined);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("/data/userData.json");
-      const json = await res.json();
+    const db = getDatabase();
+    const userDataRef = ref(db, "userData");
 
-      setUserData(json);
-    }
-
-    fetchData()
-      .catch(console.error);;
+    onValue(userDataRef, function(snapshot) {
+      const userDataObj = snapshot.val();
+      const objKeys = Object.keys(userDataObj);
+      const objArray = objKeys.map((keyString) => {
+        userDataObj[keyString].key = keyString;
+        return userDataObj[keyString];
+      });
+      setUserData(objArray);
+    });
   }, []);
 
   function logOut() {

@@ -6,6 +6,7 @@ import { faBookmark as regBookmark } from '@fortawesome/free-regular-svg-icons'
 import { getAvgRating } from "./ResultCard";
 import { icon } from "@fortawesome/fontawesome-svg-core";
 import { useState, useEffect } from 'react';
+import {getDatabase, ref, set as firebaseSet, push as firebasePush, onValue,} from "firebase/database";
 
 export function ResultHeader(props) {
   const place = props.place; // place is a place object
@@ -15,28 +16,32 @@ export function ResultHeader(props) {
   const [isSaved, setIsSaved] = useState(setTimeout(function() { checkIfSaved(); }, 100));
 
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("/data/placeData.json");
-      const json = await res.json();
+    const db = getDatabase();
+    const placeDataRef = ref(db, "placeData");
 
-      setPlaceData(json);
-    };
-
-    fetchData().catch((err) => {
-      console.log(err);
+    onValue(placeDataRef, function(snapshot) {
+      const placeDataObj = snapshot.val();
+      const objKeys = Object.keys(placeDataObj);
+      const objArray = objKeys.map((keyString) => {
+        placeDataObj[keyString].key = keyString;
+        return placeDataObj[keyString];
+      });
+      setPlaceData(objArray);
     });
   }, []);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("/data/userData.json");
-      const json = await res.json();
+    const db = getDatabase();
+    const userDataRef = ref(db, "userData");
 
-      setUserData(json);
-    };
-
-    fetchData().catch((err) => {
-      console.log(err);
+    onValue(userDataRef, function(snapshot) {
+      const userDataObj = snapshot.val();
+      const objKeys = Object.keys(userDataObj);
+      const objArray = objKeys.map((keyString) => {
+        userDataObj[keyString].key = keyString;
+        return userDataObj[keyString];
+      });
+      setUserData(objArray);
     });
   }, []);
 

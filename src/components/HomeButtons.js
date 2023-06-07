@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CreateFilterBoxes from "./CreateFilterBoxes";
 import Slider from "./Slider";
 import { useNavigate } from "react-router-dom";
+import {getDatabase, ref, set as firebaseSet, push as firebasePush, onValue,} from "firebase/database";
 
 export function HomeButtons(props) {
     const [isClicked, setIsClicked] = useState(false);
@@ -10,11 +11,18 @@ export function HomeButtons(props) {
     const [placeData, setPlaceData] = useState(null);
 
     useEffect( () => {
-      fetch("/data/placeData.json")
-        .then((res) => res.json())
-        .then((data) => {
-          setPlaceData(data);
-        })
+    const db = getDatabase();
+    const placeDataRef = ref(db, "placeData");
+
+    onValue(placeDataRef, function(snapshot) {
+      const placeDataObj = snapshot.val();
+      const objKeys = Object.keys(placeDataObj);
+      const objArray = objKeys.map((keyString) => {
+        placeDataObj[keyString].key = keyString;
+        return placeDataObj[keyString];
+      });
+      setPlaceData(objArray);
+    });
     }, []);
 
     const handleClick = (event) => {

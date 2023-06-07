@@ -1,27 +1,40 @@
 import React from "react";
 import { ReviewCard } from "./ReviewCard";
 import { useState, useEffect } from "react";
+import {getDatabase, ref, set as firebaseSet, push as firebasePush, onValue,} from "firebase/database";
 
 export function ReviewList(props) {
   const [reviewData, setReviewData] = useState(null);
   const [userData, setUserData] = useState(null);
 
   useEffect( () => {
-    fetch("/data/reviewData.json")
-      .then((res) => {
-        return res.json()})
-      .then((data) => {
-        setReviewData(data);
-      })
+    const db = getDatabase();
+    const reviewDataRef = ref(db, "reviewData");
+
+    onValue(reviewDataRef, function(snapshot) {
+      const reviewDataObj = snapshot.val();
+      const objKeys = Object.keys(reviewDataObj);
+      const objArray = objKeys.map((keyString) => {
+        reviewDataObj[keyString].key = keyString;
+        return reviewDataObj[keyString];
+      });
+      setReviewData(objArray);
+    });
   }, []);
 
   useEffect( () => {
-    fetch("/data/userData.json")
-      .then((res) => {
-        return res.json()})
-      .then((data) => {
-        setUserData(data);
-      })
+    const db = getDatabase();
+    const userDataRef = ref(db, "userData");
+
+    onValue(userDataRef, function(snapshot) {
+      const userDataObj = snapshot.val();
+      const objKeys = Object.keys(userDataObj);
+      const objArray = objKeys.map((keyString) => {
+        userDataObj[keyString].key = keyString;
+        return userDataObj[keyString];
+      });
+      setUserData(objArray);
+    });
   }, []);
 
   const place = props.place;

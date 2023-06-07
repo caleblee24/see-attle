@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { LoginHeader } from './LoginHeader';
 import { Footer } from './Footer';
+import {getDatabase, ref, set as firebaseSet, push as firebasePush, onValue,} from "firebase/database";
 
 function ForgotPwPage() {
   const [email, setEmail] = useState('');
@@ -9,11 +10,18 @@ function ForgotPwPage() {
   const [userData, setUserData] = useState(null);
 
   useEffect( () => {
-    fetch("/data/userData.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setUserData(data);
-      })
+    const db = getDatabase();
+    const userDataRef = ref(db, "userData");
+
+    onValue(userDataRef, function(snapshot) {
+      const userDataObj = snapshot.val();
+      const objKeys = Object.keys(userDataObj);
+      const objArray = objKeys.map((keyString) => {
+        userDataObj[keyString].key = keyString;
+        return userDataObj[keyString];
+      });
+      setUserData(objArray);
+    });
   }, []);
 
   const handleSubmit = (e) => {
