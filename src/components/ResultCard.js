@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Stars } from "./stars";
 import { useNavigate } from "react-router-dom";
+import {getDatabase, ref, set as firebaseSet, push as firebasePush, onValue,} from "firebase/database";
 
 /* Creates one result card used to populate result list. Props.place takes in a single "place" object
  as described in placeData.json. */
@@ -30,11 +31,19 @@ export const getAvgRating = (placeId) => {
   const [reviewData, setReviewData] = useState(null);
 
   useEffect( () => {
-    fetch("/data/reviewData.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setReviewData(data);
-      })
+    const db = getDatabase();
+    const reviewDataRef = ref(db, "reviewData");
+
+    onValue(reviewDataRef, function(snapshot) {
+      const reviewDataObj = snapshot.val();
+      const objKeys = Object.keys(reviewDataObj);
+      const objArray = objKeys.map((keyString) => {
+        reviewDataObj[keyString].key = keyString;
+        return reviewDataObj[keyString];
+      });
+      setReviewData(objArray);
+    });
+
   }, []);
 
   let ratings = undefined;

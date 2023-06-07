@@ -259,8 +259,8 @@ function AddLocation() {
       </div>
       <Footer />
       {placeAdded && (
-        <div className="popup">
-          <div className="popup-content">
+        <div className="popup-kacey">
+          <div className="popup-kacey-content">
             <h2>Location Added Successfully</h2>
             <p>Your place has been added successfully. Thank you for sharing!</p>
             <button onClick={handlePopupClose}>Close</button>

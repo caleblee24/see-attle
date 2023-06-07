@@ -2,27 +2,28 @@ import React from "react";
 import { ResultHeader } from "./ResultHeader";
 import { ReviewList } from "./ReviewList";
 import { Hours } from "./Hours";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
+import {getDatabase, ref, set as firebaseSet, push as firebasePush, onValue,} from "firebase/database";
 
 export function SelectedPage(props) {
   const { placeId } = useParams();
   const [placeData, setPlaceData] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("/data/placeData.json");
-      const json = await res.json();
+    const db = getDatabase();
+    const placeDataRef = ref(db, "placeData");
 
-      setPlaceData(json);
-    };
-
-    fetchData().catch((err) => {
-      console.log(err);
+    onValue(placeDataRef, function(snapshot) {
+      const placeDataObj = snapshot.val();
+      const objKeys = Object.keys(placeDataObj);
+      const objArray = objKeys.map((keyString) => {
+        placeDataObj[keyString].key = keyString;
+        return placeDataObj[keyString];
+      });
+      setPlaceData(objArray);
     });
   }, []);
 
