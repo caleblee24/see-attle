@@ -1017,15 +1017,15 @@ button[type="submit"]:hover {
   position: relative;
 }
 
-/* style for saved bookmark icon on the saved places page */
-.saved-bookmark-container .fa-solid.fa-bookmark {
+/* style for saved bookmark icon on the saved places page
+.saved-bookmark-container {
   color: #FFBF46;
-  ;
   bottom: 0;
   right: 0px;
   position: absolute;
   font-size: 1.5rem;
-}
+} */
+
 
 .fa-solid.fa-bars {
   font-size: 30px;
@@ -1319,6 +1319,13 @@ html {
 
 /* styling the bookmark icon */
 .fa-regular.fa-bookmark {
+  font-size: 1.8rem;
+  margin: 4px;
+  color: #FFBF46;
+  -webkit-text-stroke: 1px white;
+}
+
+.fa-solid.fa-bookmark {
   font-size: 1.8rem;
   margin: 4px;
   color: #FFBF46;
@@ -1691,6 +1698,21 @@ input[type="range"] {
 /* style the range bar text */
 .range-labels span {
   font-size: 16px;
+}
+
+
+.fa-bookmark:hover {
+  cursor: pointer;
+}
+
+.fa-solid.fa-bookmark:hover {
+  color: #ebac36;
+  transition: all 0.6s ease;
+}
+
+.fa-regular.fa-bookmark:hover {
+  color: #ffc65cbc;
+  transition: all 0.6s ease;
 }
 
 .popup {

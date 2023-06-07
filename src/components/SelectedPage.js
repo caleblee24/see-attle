@@ -42,10 +42,6 @@ export function SelectedPage(props) {
       <main className="flex-1 full-height">
         <div className="page-content">
           <section className="result-selection flex-auto">
-            <Link className="nav-back" to="/result">
-              <FontAwesomeIcon icon={faChevronLeft} />
-              <p>Back to results</p>
-            </Link>
 
             <ResultHeader place={place} />
             <div>
