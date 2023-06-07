@@ -3,10 +3,10 @@ import { LoginHeader } from './LoginHeader';
 import { Footer } from './Footer';
 
 function CreateAccountPage() {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [statusMessage, setStatusMessage] = useState("");
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [statusMessage, setStatusMessage] = useState('');
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -20,18 +20,39 @@ function CreateAccountPage() {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const userInfo = {
-      id: Date.now(), // this will serve as a unique id for the user, as it's the timestamp of when they submit the form.
+      id: Date.now(),
       displayName: username,
       username,
       email,
       password,
-      pfp: {} // the pfp field will be an empty object initially
+      pfp: {}
     };
-    localStorage.setItem("userInfo", JSON.stringify(userInfo));
-    setStatusMessage("Account created successfully!");
+
+    try {
+      const response = await fetch('/data/userData.json');
+      const userData = await response.json();
+
+      // Add the new user to the existing user data
+      const updatedUserData = [...userData, userInfo];
+
+      // Save the updated user data back to userData.json
+      await fetch('/data/userData.json', {
+        method: 'PUT',
+        body: JSON.stringify(updatedUserData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      setStatusMessage('Account created successfully!');
+      console.log('Updated userData:', updatedUserData); // Log the updated userData array
+    } catch (error) {
+      console.error('Error:', error);
+      setStatusMessage('An error occurred while creating the account.');
+    }
   };
 
   return (
@@ -59,7 +80,8 @@ function CreateAccountPage() {
   );
 }
 
-export {CreateAccountPage}
+export { CreateAccountPage };
+
 
 
 

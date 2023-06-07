@@ -11,33 +11,33 @@ function LoginPage({ onLogin }) {
   const [userData, setUserData] = useState([]);
   const navigate = useNavigate();
 
-  useEffect( () => {
+  useEffect(() => {
     fetch("/data/userData.json")
-      .then((res) =>
-        { return res.json()})
+      .then((res) => res.json())
       .then((data) => {
         setUserData(data);
       })
+      .catch((error) => console.error('Error:', error));
   }, []);
 
   const handleLogin = (e) => {
     e.preventDefault();
 
     // Perform login validation
-    const user = userData.find((user) => user.email === email);
+    const user = userData.find(
+      (user) => user.email === email && user.password === password
+    );
+
     if (user) {
-      if (password === user.password) {
-        setError('');
-        onLogin(true);
-        localStorage.setItem('user', user.username);
-        navigate('/home');
-      } else {
-        setError('Incorrect Password');
-      }
+      setError('');
+      onLogin(true);
+      localStorage.setItem('user', user.username);
+      navigate('/home');
     } else {
-      setError('Invalid Email');
+      setError('Invalid Email or Password');
     }
   };
+
 
   return (
     <div className="login-body">
