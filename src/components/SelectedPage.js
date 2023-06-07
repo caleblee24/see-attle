@@ -2,14 +2,22 @@ import React from "react";
 import { ResultHeader } from "./ResultHeader";
 import { ReviewList } from "./ReviewList";
 import { Hours } from "./Hours";
-import placeData from "../placeData.json";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 export function SelectedPage(props) {
-  const navigate = useNavigate();
   const { placeId } = useParams();
+  const [placeData, setPlaceData] = useState(null);
+
+  useEffect( () => {
+    fetch("./data/placeData.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setPlaceData(data);
+      })
+  }, []);
 
   const place = placeData.find(data => {
     return data.id === parseInt(placeId)});

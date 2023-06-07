@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import userData from '../userData.json';
+import React, { useState, useEffect } from 'react';
 import { LoginHeader } from './LoginHeader';
 import { Footer } from './Footer';
 
@@ -7,6 +6,15 @@ function ForgotPwPage() {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
+  const [userData, setUserData] = useState(null);
+
+  useEffect( () => {
+    fetch("./data/userData.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setUserData(data);
+      })
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
