@@ -8,7 +8,8 @@
     "pfp": {
       "img": "/imgs/thanh-pfp.jpg",
       "alt": "Plush bear."
-    }
+    },
+    "savedPlaces": [1, 2]
   },
   {
     "id": 2,
@@ -19,6 +20,7 @@
     "pfp": {
       "img": "/imgs/nathan-pfp.jpg",
       "alt": "Plush bear."
-    }
+    },
+    "savedPlaces": [3]
   }
 ]

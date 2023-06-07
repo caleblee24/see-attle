@@ -2,10 +2,66 @@ import React from "react";
 import { Stars } from "./stars";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
+import { faBookmark as regBookmark } from '@fortawesome/free-regular-svg-icons'
 import { getAvgRating } from "./ResultCard";
+import { icon } from "@fortawesome/fontawesome-svg-core";
+import { useState, useEffect } from 'react';
 
 export function ResultHeader(props) {
   const place = props.place; // place is a place object
+  const [placeData, setPlaceData] = useState(null);
+  const [userData, setUserData] = useState(null);
+  const username = localStorage.getItem('user');
+  const [isSaved, setIsSaved] = useState(setTimeout(function() { checkIfSaved(); }, 100));
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("/data/placeData.json");
+      const json = await res.json();
+
+      setPlaceData(json);
+    };
+
+    fetchData().catch((err) => {
+      console.log(err);
+    });
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("/data/userData.json");
+      const json = await res.json();
+
+      setUserData(json);
+    };
+
+    fetchData().catch((err) => {
+      console.log(err);
+    });
+  }, []);
+
+  function bookmarkClicked() {
+    setIsSaved(!isSaved);
+
+    const user = userData.find(user => user.username === username);
+    const saved = user.savedPlaces;
+    let newSaved= undefined;
+    if (!isSaved) { // add to list, set isnt synchronous so we gotta do opposite
+      newSaved = [...saved, place.id];
+    } else {
+      newSaved = saved.filter(id => id !== place.id);
+    }
+
+  }
+
+  function checkIfSaved() {
+    if (userData) {
+      const user = userData.find(user => user.username === username);
+      const saved = user.savedPlaces;
+      return saved.includes(place.id);
+    }
+  }
+
 
   return (
     <>
@@ -28,7 +84,7 @@ export function ResultHeader(props) {
         <div className="res-sel-info">
           <div className="desc-bookmark-container">
             <p className="res-sel-desc">{place.desc}</p>
-            <FontAwesomeIcon className="fa-regular fa-bookmark" icon={faBookmark} />
+            <FontAwesomeIcon onClick={bookmarkClicked} className={isSaved ? "fa-solid fa-bookmark" : "fa-regular fa-bookmark"} icon={isSaved ? faBookmark : regBookmark} />
           </div>
 
           <div className="res-sel-btns">

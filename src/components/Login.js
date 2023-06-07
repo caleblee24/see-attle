@@ -1,23 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 // import userData from '../userData.json';
-import { Footer } from './Footer';
-import { Link, useNavigate } from 'react-router-dom';
-import { LoginHeader } from './LoginHeader';
+import { Footer } from "./Footer";
+import { Link, useNavigate } from "react-router-dom";
+import { LoginHeader } from "./LoginHeader";
+import {
+  getDatabase,
+  ref,
+  set as firebaseSet,
+  push as firebasePush,
+  onValue,
+} from "firebase/database";
 
 function LoginPage({ onLogin }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const [userData, setUserData] = useState([]);
   const navigate = useNavigate();
 
-  useEffect( () => {
-    fetch("/data/userData.json")
-      .then((res) =>
-        { return res.json()})
-      .then((data) => {
-        setUserData(data);
-      })
+  useEffect(() => {
+    const db = getDatabase();
+    const userDataRef = ref(db, "userData");
+
+    onValue(userDataRef, function(snapshot) {
+      const userDataObj = snapshot.val();
+      const objKeys = Object.keys(userDataObj);
+      const objArray = objKeys.map((keyString) => {
+        userDataObj[keyString].key = keyString;
+        return userDataObj[keyString];
+      });
+      setUserData(objArray);
+    });
   }, []);
 
   const handleLogin = (e) => {
@@ -27,15 +40,15 @@ function LoginPage({ onLogin }) {
     const user = userData.find((user) => user.email === email);
     if (user) {
       if (password === user.password) {
-        setError('');
+        setError("");
         onLogin(true);
-        localStorage.setItem('user', user.username);
-        navigate('/home');
+        localStorage.setItem("user", user.username);
+        navigate("/home");
       } else {
-        setError('Incorrect Password');
+        setError("Incorrect Password");
       }
     } else {
-      setError('Invalid Email');
+      setError("Invalid Email");
     }
   };
 
@@ -71,7 +84,8 @@ function LoginPage({ onLogin }) {
             </button>
             {error && <p className="error-message">{error}</p>}
             <p>
-              Don't have an account? <Link to="/createAccount">Create an account</Link>
+              Don't have an account?{" "}
+              <Link to="/createAccount">Create an account</Link>
             </p>
             <p>
               Forgot your password? <Link to="/forgotPw">Reset Password</Link>

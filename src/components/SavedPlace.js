@@ -7,22 +7,46 @@ import { useState, useEffect } from 'react';
 
 export function SavedPlaces() {
   const [placeData, setPlaceData] = useState(null);
+  const [userData, setUserData] = useState(null);
+  const username = localStorage.getItem('user');
 
-  useEffect( () => {
-    fetch("/data/placeData.json")
-      .then((res) => {
-        return res.json()})
-      .then((data) => {
-        setPlaceData(data);
-      })
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("/data/placeData.json");
+      const json = await res.json();
+
+      setPlaceData(json);
+    };
+
+    fetchData().catch((err) => {
+      console.log(err);
+    });
   }, []);
 
-  let savedPlaces = undefined;
-  if (placeData) {
-    savedPlaces = placeData.filter(place => place.saved);
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("/data/userData.json");
+      const json = await res.json();
+
+      setUserData(json);
+    };
+
+    fetchData().catch((err) => {
+      console.log(err);
+    });
+  }, []);
+
+  let userSavedIds = undefined;
+  if (userData) {
+    userSavedIds = userData.find(user => user.username === username).savedPlaces;
   }
 
-  if (savedPlaces === undefined) {
+  let savedPlaces = undefined;
+  if (placeData && userSavedIds) {
+    savedPlaces = placeData.filter(place => userSavedIds.includes(place.id));
+  }
+
+  if (savedPlaces === undefined || userSavedIds === undefined) {
     return <>Loading...</>;
   }
 
